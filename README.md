@@ -81,8 +81,10 @@ singularity run --nv $sif_path \
 ```
 
 # About RATNUS
+
+
 ## Model
-The RATNUS project includes two versions:
+There are two available versions:
 - **T1w-Dual Input Version**: Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
 - **Full Input Version**: Trained with a comprehensive set of modalities, detailed in the paper. 
 This version exclusively supports testing with an identical set of input features.
@@ -109,7 +111,7 @@ The output segmentation file labels 13 distinct thalamic nuclei, with `0` repres
 
 Each nucleus is uniquely identified by a color code to facilitate visual analysis of the segmentation results. 
 The color table can be viewed and downloaded from :
-[RATNUS Color Table](https://github.com/ANQIFENG/RATNUS/blob/main/ratnus_color_table.txt)
+[RATNUS Color Table](https://github.com/ANQIFENG/RATNUS/blob/main/ratnus_color_table.txt).
 
 
 # Citation
