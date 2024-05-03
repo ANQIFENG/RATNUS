@@ -79,6 +79,7 @@ singularity run --nv $sif_path \
 ## Input 
 ### T1w-Dual Input Version: 
 - Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
+
 - For optimal results, ensure that your test data is prepared as follows:
   - **Registration to MNI Space**: The data should be registered to the MNI space, with a resolution of 1mm isotropic.
     RATNUS assumes a spatial dimensions of 192x224x192.
@@ -86,8 +87,25 @@ singularity run --nv $sif_path \
   - **Intensity Normalization**:
     RATNUS uses [Fuzzy C-means White Matter Mean Normalization](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short).
 
-### Full Input Version: Trained with a comprehensive set of modalities, detailed in the paper. 
-This version exclusively supports testing with an identical set of input features.
+### Full Input Version: 
+- Trained with a comprehensive set of modalities including MPRAGE, FGATIR, T1 map, PD map, Multi-TI images, and diffusion-derived features as detailed in our paper.
+
+- This version strictly supports testing with an identical set of input features.
+
+- The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. 
+  However, to synthesize Multi-TI images effectively, these modalities must be processed together. 
+  Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. 
+  Therefore, a harmonic bias field is employed for Bias Field Correction and consistent Intensity Normalization is applied to ensure uniformity. 
+  Details are further elaborated in the paper.
+
+  - The T1 map and PD map within RATNUS are generated using a combined processing of MPRAGE and FGATIR images. 
+  Following this, a series of Multi-TI images are synthesized. 
+  Specifically, the TI values range from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
+  This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.
+  To assist users, we have packaged the pipeline for synthesizing Multi-TI images from MPRAGE and FGATIR. 
+  Inputting the raw MPRAGE and FGATIR will yield processed MPRAGE and FGATIR, T1 maps, PD maps, and the series of Multi-TI images.
+  please refer to [this page](https://link-to-detailed-page).
+
 
 
 ## Outputs
