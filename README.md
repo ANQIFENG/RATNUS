@@ -91,7 +91,25 @@ This version exclusively supports testing with an identical set of input feature
 RATNUS generates a single NIfTI file ending with `_ratnus` in your predefined output directory. 
 The output file will maintain the same dimensions and resolution as your input data.
 
+The output segmentation file labels 13 distinct thalamic nuclei, with `0` representing the background and `1-13` corresponding to specific nuclei labels as follows:
+- `1`: Anterior Nucleus (AN)
+- `2`: Central Lateral (CL)
+- `3`: Center Median (CM)
+- `4`: Lateral Dorsal (LD)
+- `5`: Lateral Posterior (LP)
+- `6`: Mediodorsal (MD)
+- `7`: Anterior Pulvinar (PuA)
+- `8`: Inferior Pulvinar (PuI)
+- `9`: Ventral Anterior (VA)
+- `10`: Ventral Lateral Anterior (VLA)
+- `11`: Ventral Lateral Posterior (VLP)
+- `12`: Ventral Posterior Lateral (VPL)
+- `13`: Ventral Posterior Medial (VPM)
 
+
+Each nucleus is uniquely identified by a color code to facilitate visual analysis of the segmentation results. 
+The color table can be viewed and downloaded from the following link:
+[Download Color Table](https://github.com/ANQIFENG/RATNUS/blob/main/ratnus_color_table.txt)
 
 
 # Citation
