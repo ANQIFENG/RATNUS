@@ -21,7 +21,7 @@ Both version can complete segmentation in less than one minute.
 
 ## Installation instructions
 ### T1-weighted dual-input version:
-- :construction: To do 
+- :construction: :construction: :construction: To do 
 
 
 ### Full-input version:
@@ -39,7 +39,7 @@ If you are using a CPU, you can remove the `--nv` option from the command.
 All input data files are expected to be in NIfTI format (`.nii` or `.nii.gz`).
 
 ### T1-weighted dual-input version:
-- :construction:  To do 
+- :construction: :construction: :construction: To do 
 
 ###  Full-input version:
 Command:
