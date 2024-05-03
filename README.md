@@ -5,7 +5,8 @@ Rapid, Automated Thalamic Nuclei Segmentation using Multimodal MRI Inputs [[Pape
 RATNUS is a deep learning-based method for rapid and automatic segmentation of thalamic nuclei using multimodal MRI. 
 Our approach efficiently segments 13 distinct nuclei classes, providing detailed insights into thalamic structure. 
 RATNUS supports two versions: a T1-weighted dual-input version and a full-input version, 
-detailed further in the [About RATNUS](#about-ratnus) section.
+detailed further in the [About RATNUS](#about-ratnus) section. 
+Both version can complete segmentation in less than one minute.
 
 
 # How to run
@@ -20,7 +21,7 @@ detailed further in the [About RATNUS](#about-ratnus) section.
 
 ## Installation instructions
 ### T1-weighted dual-input version:
-*** To do *** 
+*** =.= To do *** 
 
 
 ### Full-input version:
@@ -28,18 +29,17 @@ The Full-input version of the RATNUS model can be installed using Singularity wi
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v7.0.0
 ```
-
-Alternatively, you can download the Singularity image directly from this [link](https://dl.dropboxusercontent.com/scl/fi/7mxniqlerbqeea11dxpzd/ratnus_v7.0.0.sif?rlkey=b098trwjbbf4v2z8z4p69nu5b&dl=1
-).
+Alternatively, you can download the Singularity image directly from this [link](https://dl.dropboxusercontent.com/scl/fi/7mxniqlerbqeea11dxpzd/ratnus_v7.0.0.sif?rlkey=b098trwjbbf4v2z8z4p69nu5b&dl=1).
 
 
 ## Usage
 To run the RATNUS model using the Singularity image, use the following command. 
 Replace the placeholder paths with the actual paths to your input files and specify the directory for the output:
-If you are not using a GPU, you can remove the `--nv` option from the command.
+If you are using a CPU, you can remove the `--nv` option from the command.
+All input data files are expected to be in NIfTI format (`.nii` or `.nii.gz`).
 
 ### T1-weighted dual-input version:
-*** To do *** 
+*** =.= To do *** 
 
 ###  Full-input version:
 Command:
@@ -69,7 +69,7 @@ out_dir="./ratnus_outputs"
 sif_path="./ratnus_v7.0.0.sif"
 
 
-# Run the RATNUS model with GPU support (remove the `--nv` option from the command if you are using a CPU)
+# Run the RATNUS model with GPU support 
 singularity run --nv $sif_path \
                 --mprage ${mprage_path} \
                 --fgatir ${fgatir_path} \
@@ -84,9 +84,12 @@ singularity run --nv $sif_path \
 ## Model
 The RATNUS project includes two versions:
 - **T1w-Dual Input Version**: Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
-- **Full Input Version**: Trained with a comprehensive set of modalities, as described in the paper.
+- **Full Input Version**: Trained with a comprehensive set of modalities, detailed in the paper. 
+This version exclusively supports testing with an identical set of input features.
 
 ## Outputs
+RATNUS generates a single NIfTI file ending with `_ratnus` in your predefined output directory. 
+The output file will maintain the same dimensions and resolution as your input data.
 
 
 
