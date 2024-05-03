@@ -9,7 +9,7 @@ detailed further in the [About RATNUS](#about-ratnus) section.
 Both version can complete segmentation in less than one minute.
 
 
-# How to run
+# How to run :runner:
 ## Prerequisites
 - **Operating System:** Linux or OSX
 - **Hardware:** NVIDIA GPU + CUDA CuDNN recommended for optimal performance; CPU mode is also supported.
@@ -80,7 +80,7 @@ singularity run --nv $sif_path \
                 --out_dir ${out_dir}
 ```
 
-# About RATNUS
+# About RATNUS :brain:
 ## Input 
 ### T1w-Dual Input Version: 
 - Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
@@ -119,10 +119,10 @@ The color table can be viewed and downloaded from :
 [RATNUS Color Table](https://github.com/ANQIFENG/RATNUS/blob/main/ratnus_color_table.txt).
 
 
-# Citation
+# Citation :open_book:
 If you find this project useful in your research, please consider citing:
 
 
 
-# Contact
+# Contact :e-mail:
 For questions or support, please contact [afeng11@jhu.edu](mailto:afeng11@jhu.edu) or post through [GitHub Issues](https://github.com/ANQIFENG/RATNUS/issues).
