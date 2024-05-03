@@ -13,12 +13,7 @@ Both version can complete segmentation in less than one minute.
 ## Prerequisites
 - **Operating System:** Linux or OSX
 - **Hardware:** NVIDIA GPU + CUDA CuDNN recommended for optimal performance; CPU mode is also supported.
-- **Data Preparation:** 
-  - **Registration:** Data should be registered to the MNI space with a resolution of 1mm isotropic. RATNUS assumes a spatial dimensions of 192x224x192.
-  - **Inhomogeneity Correction** 
-  - **Intensity Normalization** 
-
-
+ 
 ## Installation instructions
 ### T1-weighted dual-input version:
 - :construction: :construction: :construction: To do 
@@ -86,12 +81,12 @@ singularity run --nv $sif_path \
 - Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
 - For optimal results, ensure that your test data is prepared as follows:
   - **Registration to MNI Space**: The data should be registered to the MNI space, with a resolution of 1mm isotropic.
-    (RATNUS assumes a spatial dimensions of 192x224x192.)
-  - **Inhomogenisu correction or Bias Field Correction**
+    RATNUS assumes a spatial dimensions of 192x224x192.
+  - **Inhomogeneity Correction or Bias Field Correction**
   - **Intensity Normalization**:
-    (RATNUS uses [Fuzzy C-means White Matter Mean Normalization](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short).)
+    RATNUS uses [Fuzzy C-means White Matter Mean Normalization](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short).
 
-- **Full Input Version**: Trained with a comprehensive set of modalities, detailed in the paper. 
+### Full Input Version: Trained with a comprehensive set of modalities, detailed in the paper. 
 This version exclusively supports testing with an identical set of input features.
 
 
