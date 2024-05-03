@@ -29,7 +29,8 @@ The Full-input version of the RATNUS model can be installed using Singularity wi
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v7.0.0
 ```
 
-Alternatively, you can download the Singularity image directly from this [link](https://dl.dropboxusercontent.com/s/example/full-input-version.sif).
+Alternatively, you can download the Singularity image directly from this [link](https://dl.dropboxusercontent.com/scl/fi/7mxniqlerbqeea11dxpzd/ratnus_v7.0.0.sif?rlkey=b098trwjbbf4v2z8z4p69nu5b&dl=1
+).
 
 
 ## Usage
