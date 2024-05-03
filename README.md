@@ -21,7 +21,7 @@ Both version can complete segmentation in less than one minute.
 
 ## Installation instructions
 ### T1-weighted dual-input version:
-*** =.= To do *** 
+- :construction: To do 
 
 
 ### Full-input version:
@@ -39,7 +39,7 @@ If you are using a CPU, you can remove the `--nv` option from the command.
 All input data files are expected to be in NIfTI format (`.nii` or `.nii.gz`).
 
 ### T1-weighted dual-input version:
-*** =.= To do *** 
+- :construction:  To do 
 
 ###  Full-input version:
 Command:
@@ -81,13 +81,18 @@ singularity run --nv $sif_path \
 ```
 
 # About RATNUS
+## Input 
+### T1w-Dual Input Version: 
+- Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
+- Expected your test data go through:
+  - Registration to the MNI space, with a resolution of 1mm isotropic. 
+    RATNUS assumes a spatial dimensions of 192x224x192.
+  - Inhomog
 
 
-## Model
-There are two available versions:
-- **T1w-Dual Input Version**: Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
 - **Full Input Version**: Trained with a comprehensive set of modalities, detailed in the paper. 
 This version exclusively supports testing with an identical set of input features.
+
 
 ## Outputs
 RATNUS generates a single NIfTI file ending with `_ratnus` in your predefined output directory. 
