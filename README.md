@@ -1,6 +1,6 @@
 # RATNUS
 
-Rapid Automated Thalamic Nuclei Segmentation using Multimodal MRI Inputs [[Paper]()]
+Rapid, Automated Thalamic Nuclei Segmentation using Multimodal MRI Inputs [[Paper]()]
 
 RATNUS is a deep learning-based method for rapid and automatic segmentation of thalamic nuclei using multimodal MRI. 
 Our approach efficiently segments 13 distinct nuclei classes, providing detailed insights into thalamic structure. 
@@ -10,7 +10,7 @@ detailed further in the [About RATNUS](#about-ratnus) section.
 
 # How to run
 ## Prerequisites
-- **Operating System:** Operating System: Linux or OSX
+- **Operating System:** Linux or OSX
 - **Hardware:** NVIDIA GPU + CUDA CuDNN recommended for optimal performance; CPU mode is also supported.
 - **Data Preparation:** 
   - **Registration:** Data should be registered to the MNI space with a resolution of 1mm isotropic. RATNUS assumes a spatial dimensions of 192x224x192.
