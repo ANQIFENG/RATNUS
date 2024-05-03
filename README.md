@@ -108,8 +108,8 @@ The output segmentation file labels 13 distinct thalamic nuclei, with `0` repres
 
 
 Each nucleus is uniquely identified by a color code to facilitate visual analysis of the segmentation results. 
-The color table can be viewed and downloaded from the following link:
-[Download Color Table](https://github.com/ANQIFENG/RATNUS/blob/main/ratnus_color_table.txt)
+The color table can be viewed and downloaded from :
+[RATNUS Color Table](https://github.com/ANQIFENG/RATNUS/blob/main/ratnus_color_table.txt)
 
 
 # Citation
