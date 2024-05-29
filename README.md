@@ -40,7 +40,7 @@ All input data files are expected to be in NIfTI format (`.nii` or `.nii.gz`).
 
 ### T1-weighted dual-input version:
 We use MPRAGE and FGATIR as normal inputs, 
-and supporting missing modalities where only MPRAGE or only FGATIR is available.
+and support missing modalities where only MPRAGE or only FGATIR is available.
 
 #### 1.Using both MPRAGE and FGATIR as inputs:
 ```bash
