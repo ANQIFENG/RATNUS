@@ -138,8 +138,13 @@ singularity run --nv $sif_path \
 
 
 ## Outputs
-RATNUS generates a single NIfTI file ending with `_ratnus` in your predefined output directory. 
+RATNUS generates a single NIfTI file in your predefined output directory. 
 The output file will maintain the same dimensions and resolution as your input data.
+
+For the full-input version, the output file name will end with `_ratnus`. 
+If you are using the T1-weighted dual-input version, the output file name will end with `_ratnus_dual`. 
+If only one modality is used in the dual-input version, the output file name will reflect the modality used, 
+ending with `_ratnus_mprage` if only MPRAGE is used, or `_ratnus_fgatir` if only FGATIR is used.
 
 The output segmentation file labels 13 distinct thalamic nuclei, with `0` representing the background and `1-13` corresponding to specific nuclei labels as follows:
 - `1`: Anterior Nucleus (AN)
