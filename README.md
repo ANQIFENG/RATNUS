@@ -20,7 +20,7 @@ The T1-weighted dual-input version of the RATNUS model can be installed using Si
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dual:v2.0.0
 ```
-Alternatively, you can download the Singularity image directly from this [link]().
+Alternatively, you can download the Singularity image directly from this [link](https://mega.nz/file/pvMRGJqb#3xlR-Wxolsq_s-V9bDtnVd25veFptmNXBXRsCPfOOTo).
 
 
 
@@ -29,7 +29,7 @@ The Full-input version of the RATNUS model can be installed using Singularity wi
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v7.0.0
 ```
-Alternatively, you can download the Singularity image directly from this [link]().
+Alternatively, you can download the Singularity image directly from this [link](https://mega.nz/file/06sVlAJK#RTNXOD3HKJa6liX19XBXq4ghOSGHmVsADRxjHJcZkX4).
 
 
 ## Usage
