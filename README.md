@@ -44,20 +44,20 @@ and support missing modalities where only MPRAGE or only FGATIR is available.
 
 #### 1.Using both MPRAGE and FGATIR as inputs:
 ```bash
-singularity run --nv ratnus.sif \
+singularity run --nv ratnus_dual.sif \
             --mprage ${path_to_your_mprage_image} \
             --fgatir ${path_to_your_fgatir_image} \
             --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
  ```           
 #### 2.Using only MPRAGE:
 ```bash
-singularity run --nv ratnus.sif \
+singularity run --nv ratnus_dual.sif \
             --mprage ${path_to_your_mprage_image} \
             --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
  ```   
 #### 3.Using only FGATIR:
 ```bash
-singularity run --nv ratnus.sif \
+singularity run --nv ratnus_dual.sif \
             --fgatir ${path_to_your_fgatir_image} \
             --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
  ```   
