@@ -16,7 +16,12 @@ Both version can complete segmentation in less than one minute.
  
 ## Installation instructions
 ### T1-weighted dual-input version:
-- :construction: :construction: :construction: To do 
+The T1-weighted dual-input version of the RATNUS model can be installed using Singularity with the following command:
+```bash
+singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dual:v2.0.0
+```
+Alternatively, you can download the Singularity image directly from this [link]().
+
 
 
 ### Full-input version:
@@ -24,7 +29,7 @@ The Full-input version of the RATNUS model can be installed using Singularity wi
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v7.0.0
 ```
-Alternatively, you can download the Singularity image directly from this [link](https://dl.dropboxusercontent.com/scl/fi/7mxniqlerbqeea11dxpzd/ratnus_v7.0.0.sif?rlkey=b098trwjbbf4v2z8z4p69nu5b&dl=1).
+Alternatively, you can download the Singularity image directly from this [link]().
 
 
 ## Usage
@@ -34,7 +39,28 @@ If you are using a CPU, you can remove the `--nv` option from the command.
 All input data files are expected to be in NIfTI format (`.nii` or `.nii.gz`).
 
 ### T1-weighted dual-input version:
-- :construction: :construction: :construction: To do 
+We support three testing modes: using MPRAGE and FGATIR as normal inputs, 
+and supporting missing modalities where only MPRAGE or only FGATIR is available.
+
+#### 1.Using both MPRAGE and FGATIR as inputs:
+```bash
+singularity run --nv ratnus.sif \
+            --mprage ${path_to_your_mprage_image} \
+            --fgatir ${path_to_your_fgatir_image} \
+            --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
+ ```           
+#### 2.Using only MPRAGE:
+```bash
+singularity run --nv ratnus.sif \
+            --mprage ${path_to_your_mprage_image} \
+            --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
+ ```   
+#### 3.Using only FGATIR:
+```bash
+singularity run --nv ratnus.sif \
+            --fgatir ${path_to_your_fgatir_image} \
+            --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
+ ```   
 
 ###  Full-input version:
 Command:
