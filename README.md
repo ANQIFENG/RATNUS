@@ -18,7 +18,7 @@ Both version can complete segmentation in less than one minute.
 ### T1-weighted dual-input version:
 The T1-weighted dual-input version of the RATNUS model can be installed using Singularity with the following command:
 ```bash
-singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dual:v2.0.0
+singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dual:v1.0.0
 ```
 Alternatively, you can download the Singularity image directly from this [link](https://mega.nz/file/pvMRGJqb#3xlR-Wxolsq_s-V9bDtnVd25veFptmNXBXRsCPfOOTo).
 
@@ -27,7 +27,7 @@ Alternatively, you can download the Singularity image directly from this [link](
 ### Full-input version:
 The Full-input version of the RATNUS model can be installed using Singularity with the following command:
 ```bash
-singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v7.0.0
+singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v1.0.0
 ```
 Alternatively, you can download the Singularity image directly from this [link](https://mega.nz/file/06sVlAJK#RTNXOD3HKJa6liX19XBXq4ghOSGHmVsADRxjHJcZkX4).
 
@@ -131,9 +131,9 @@ singularity run --nv $sif_path \
   Inputting the raw MPRAGE and FGATIR will yield processed MPRAGE and FGATIR, T1 maps, PD maps, and the series of Multi-TI images.
   please refer to [this page](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md).
 
-- The diffusion derived features within RATNUS includes Axial Diffusivity, Fractional Anisotropy, Radial Diffusivity, Trace, 
+- Diffusion Data Processing Pipeline: The diffusion derived features within RATNUS includes Axial Diffusivity, Fractional Anisotropy, Radial Diffusivity, Trace, 
   three Westin measures, Knutsson 5D vector and the Knutsson edge map.  
-  To assist users, we have packaged the pipeline for procssing raw diffusion images, tensor fitting, and calculating scalar maps.
+  To assist users, we h codes a the pipeline for procssing raw diffusion images, tensor fitting, and calculating scalar maps.
   please refer to [this page](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md).
 
 
