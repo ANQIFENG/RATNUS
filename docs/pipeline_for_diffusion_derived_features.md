@@ -57,6 +57,22 @@ mtbi_study/
 ...
 ``````
 
-## Diffusion Data Imaging parameters
+## Data Description
+
+In this study, we have two types of diffusion MRI data stored in the `nii` folder:
+
+1. **B0 Image (`DIFF_*_B0_*`)**
+   - **Phase-encoding Direction**: Posterior-Anterior (PA) 
+   - **B-values**: 0
+   - **In-plane Resolution**: 2mm
+
+2. **High b-value Image (`DIFF_*_BMAX2500_*`)**
+   - **Phase-encoding Direction**: Anterior-Posterior (AP) view
+   - **B-values**: 0, 1000, 2500
+   - **Encoding Directions**: 136 directions 
+   - **In-plane Resolution**: 2mm
+
+The B0 image in PA view is only used for EPI distortion correction in Tortoise DR BUDDI module. 
+All images are collected using a 3T Siemens Prisma scanner.
 
 ## Expected output
