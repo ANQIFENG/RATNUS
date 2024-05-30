@@ -1,7 +1,7 @@
 # Pipeline for Diffusion-Derived Features
 
 This document describes the processing pipeline for diffusion MRI data. 
-The scripts used in this pipeline can be found in the following GitHub repository: [RATNUS - DMRI Pipeline](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline).
+The scripts can be found in: [RATNUS - DMRI Pipeline](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline).
 
 
 ## Steps Overview
