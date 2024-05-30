@@ -106,7 +106,7 @@ def process_subjects():
             #
             # ********************* DIFFPREP *********************
             print(f"Running DIFFPREP for {sess_id}...")
-            t2 = f"{sess_path}/proc/*T2*_rawreg_thre_n4_wmnorm.nii.gz"
+            t2 = f"{sess_path}/proc/*T2*.nii.gz"
             run_command(f"DIFFPREP -i {ap_out_dir}/AP.list -s {t2} --will_be_drbuddied 1 -d for_final --is_human_brain 1 --upsampling all --res 1.0 1.0 1.0 --keep_intermediate 1 --do_QC 0")
             run_command(f"DIFFPREP -i {pa_out_dir}/PA.list -s {t2} --will_be_drbuddied 1 -d for_final --is_human_brain 1 --upsampling all --res 1.0 1.0 1.0 --keep_intermediate 1 --do_QC 0")
 

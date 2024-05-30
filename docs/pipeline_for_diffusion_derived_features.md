@@ -75,4 +75,7 @@ In this study, we have two types of diffusion MRI data stored in the `nii` folde
 The B0 image in PA view is only used for EPI distortion correction in Tortoise DR BUDDI module. 
 All images are collected using a 3T Siemens Prisma scanner.
 
+Additionally, T2-weighted images are required in the step00, specifically the DIFFPREP and DRBUDDI modules. 
+Our T2 images are in MNI space with 1mm resolution,  and have undergone N4 bias field correction and white matter mean normalization.
+
 ## Expected output
