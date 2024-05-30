@@ -32,6 +32,7 @@ The data structure used in the scripts is organized as follows:
       - **Processed Data Directory** (`proc`)
 
 Here is a visual representation of the data structure:
+``````
 mtbi_study/
 ├── MTBI-0001/
 │ ├── v1/
@@ -54,7 +55,7 @@ mtbi_study/
 │ ├── nii/
 │ └── proc/
 ...
-
+``````
 
 ## Diffusion Data Imaging parameters
 
