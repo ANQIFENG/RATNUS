@@ -131,10 +131,10 @@ singularity run --nv $sif_path \
   Inputting the raw MPRAGE and FGATIR will yield processed MPRAGE and FGATIR, T1 maps, PD maps, and the series of Multi-TI images.
   please refer to [this page](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md).
 
-- Diffusion Data Processing Pipeline: The diffusion derived features within RATNUS includes Axial Diffusivity, Fractional Anisotropy, Radial Diffusivity, Trace, 
-  three Westin measures, Knutsson 5D vector and the Knutsson edge map.  
-  To assist users, we h codes a the pipeline for procssing raw diffusion images, tensor fitting, and calculating scalar maps.
-  please refer to [this page](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md).
+- **Diffusion Data Processing Pipeline**:
+  The diffusion-derived features within RATNUS include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map. 
+  To assist users, we have documented the details of the diffusion data processing pipeline. Please refer to [this page](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md). 
+  Additionally, the processing code can be found on this page: [dmri_pipeline](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline).
 
 
 ## Outputs
