@@ -123,13 +123,14 @@ singularity run --nv $sif_path \
   Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. 
   Therefore, a harmonic bias field is employed for Bias Field Correction and consistent Intensity Normalization is applied to ensure uniformity.
 
-- The T1 map and PD map within RATNUS are generated using a combined processing of MPRAGE and FGATIR images. 
+- **Structural MRI Processing Pipeline**:
+  The T1 map and PD map within RATNUS are generated using a combined processing of MPRAGE and FGATIR images. 
   Following this, a series of Multi-TI images are synthesized. 
   Specifically, the Inversion Time (TI) for Multi-TI image ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
   This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.
   To assist users, we have packaged the pipeline for synthesizing Multi-TI images from MPRAGE and FGATIR. 
   Inputting the raw MPRAGE and FGATIR will yield processed MPRAGE and FGATIR, T1 maps, PD maps, and the series of Multi-TI images.
-  please refer to [this page](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md).
+  please refer to [smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md).
 
 - **Diffusion Data Processing Pipeline**:
   The diffusion-derived features within RATNUS include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map. 
