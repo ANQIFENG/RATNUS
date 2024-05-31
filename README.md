@@ -133,7 +133,7 @@ singularity run --nv $sif_path \
 
 - **Diffusion Data Processing Pipeline**:
   The diffusion-derived features within RATNUS include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map. 
-  To assist users, we have documented the details of the diffusion data processing pipeline, detailed on [dmri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md). 
+  To assist users, we have documented the details of the diffusion data processing pipeline on [dmri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md). 
   Additionally, the processing code can be found on [dmri_pipeline_codes](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline).
 
 
