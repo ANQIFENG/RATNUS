@@ -16,7 +16,7 @@ Both version can complete segmentation in less than one minute.
  
 ## Installation 
 ### T1-weighted dual-input version:
-The T1-weighted dual-input version of the RATNUS model can be installed using Singularity with the following command:
+Install using Singularity with the following command:
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dual:v1.0.0
 ```
@@ -25,7 +25,7 @@ Alternatively, you can download the Singularity image directly from this [link](
 
 
 ### Full-input version:
-The Full-input version of the RATNUS model can be installed using Singularity with the following command:
+Install using Singularity with the following command:
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v1.0.0
 ```
