@@ -14,7 +14,7 @@ Both version can complete segmentation in less than one minute.
 - **Operating System:** Linux or OSX
 - **Hardware:** NVIDIA GPU + CUDA CuDNN recommended for optimal performance; CPU mode is also supported.
  
-## Installation instructions
+## Installation 
 ### T1-weighted dual-input version:
 The T1-weighted dual-input version of the RATNUS model can be installed using Singularity with the following command:
 ```bash
@@ -120,7 +120,7 @@ singularity run --nv $sif_path \
 
 - The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. 
   However, to synthesize Multi-TI images effectively, these modalities must be processed together. 
-  Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. 
+  Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps :warning:. 
   Therefore, a harmonic bias field is employed for Bias Field Correction and consistent Intensity Normalization is applied to ensure uniformity.
 
 - **Structural MRI Processing Pipeline**:
