@@ -103,8 +103,8 @@ singularity run --nv $sif_path \
 
 # About RATNUS :brain:
 ## Input 
-### T1w-Dual Input Version: 
-- Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
+### T1w-Dual Input Version:
+Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
 <div style="text-align: center;">
   <table>
     <thead>
@@ -140,15 +140,13 @@ singularity run --nv $sif_path \
 </div>
 
 ### Full Input Version: 
-- Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
+Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
 
+The T1 map, PD map and Multi-TI images are calculated from raw MPRAGE and FGATIR images. To assist users, we have packaged the whole pipeline
+into a Singularity Container, please refer to [[smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md)].
 
-To assist users, we have packaged the pipeline for synthesizing Multi-TI images from MPRAGE and FGATIR. 
-  Inputting the raw MPRAGE and FGATIR will yield processed MPRAGE and FGATIR, T1 maps, PD maps, and the series of Multi-TI images.
-
-To assist users, we have documented the details of the diffusion data processing pipeline on [dmri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md). 
-  Additionally, the processing code can be found on [dmri_pipeline_codes](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline).
-please refer to [smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md).
+For diffusion derived features, we have also documented the details of the diffusion data processing pipeline on [[dmri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md)]. 
+Additionally, the processing code can be found on [[dmri_pipeline_codes](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline)].
 
 
 <div style="text-align: center;">
