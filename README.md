@@ -113,7 +113,7 @@ singularity run --nv $sif_path \
   - **Intensity Normalization**:
     RATNUS uses Fuzzy C-means White Matter Mean Normalization [[link](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short)].
 
-<div style="margin-left: 2000px;">
+<div style="text-align: center;">
   <table>
     <thead>
       <tr>
