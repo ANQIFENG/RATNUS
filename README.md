@@ -140,9 +140,7 @@ singularity run --nv $sif_path \
 </div>
 
 ### Full Input Version: 
-- Trained with a comprehensive set of modalities including MPRAGE, FGATIR, T1 map, PD map, Multi-TI images, and diffusion-derived features as detailed in our paper.
-
-- This version strictly supports testing with an identical set of input features.
+- Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
 
 - The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. 
   However, to synthesize Multi-TI images effectively, these modalities must be processed together. 
@@ -157,12 +155,65 @@ singularity run --nv $sif_path \
   To assist users, we have packaged the pipeline for synthesizing Multi-TI images from MPRAGE and FGATIR. 
   Inputting the raw MPRAGE and FGATIR will yield processed MPRAGE and FGATIR, T1 maps, PD maps, and the series of Multi-TI images.
   please refer to [smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md).
-
-- **Diffusion Data Processing Pipeline**:
-  The diffusion-derived features within RATNUS include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map. 
-  To assist users, we have documented the details of the diffusion data processing pipeline on [dmri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md). 
+ 
+- To assist users, we have documented the details of the diffusion data processing pipeline on [dmri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md). 
   Additionally, the processing code can be found on [dmri_pipeline_codes](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline).
 
+<div style="text-align: center;">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Preparation</th>
+        <th >Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center;">MPRAGE</td>
+        <td style="text-align: left;" rowspan="2"> 
+          <ul>
+              <li> 
+              <li> The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. </li>
+              <li> However, to synthesize Multi-TI images effectively, these modalities must be processed together. 
+                Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps :warning:. </li>
+              <li> Therefore, a harmonic bias field is employed for Bias Field Correction and consistent Intensity Normalization is applied to ensure uniformity.</li>
+          </ul>
+        </td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">FGATIR</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">T1&PD maps</td>
+        <td style="text-align: left;">
+        </td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">Multi-TI</td>
+        <td style="text-align: left;">
+        </td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">Diffusion</td>
+        <td style="text-align: left;">
+          <ul>
+              <li>The diffusion-derived features within RATNUS include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map. 
+                  To assist users, we have documented the details of the diffusion data processing pipeline on
+                  <a href="https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md" target="_blank">[dmri_pipeline_descriptions]</a>.
+                  Additionally, the processing code can be found on <a href="https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md" target="_blank">[dmri_pipeline_codes]</a>.
+              </li>
+          </ul>
+        </td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Outputs
 RATNUS generates a single NIfTI file in your predefined output directory. 
