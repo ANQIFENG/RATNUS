@@ -125,10 +125,10 @@ singularity run --nv $sif_path \
     <tbody>
       <tr>
         <td style="text-align: center;">MPRAGE</td>
-        <td style="text-align: left;" rowspan="2"> 
-          <ul>
+        <td style="text-align: left;">
+          <ul style="list-style-type: disc; padding-left: 20px;">
             <li>Registration to MNI Space</li>
-            <li>Inhomogeneity Correction </li>
+            <li>Inhomogeneity Correction</li>
             <li>Intensity Normalization</li>
           </ul>
         </td>
@@ -138,6 +138,13 @@ singularity run --nv $sif_path \
       </tr>
       <tr>
         <td style="text-align: center;">FGATIR</td>
+        <td style="text-align: left;">
+          <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Registration to MNI Space</li>
+            <li>Inhomogeneity Correction</li>
+            <li>Intensity Normalization</li>
+          </ul>
+        </td>
         <td style="text-align: center;">✅</td>
         <td style="text-align: center;">⭕️</td>
         <td style="text-align: center;">✅</td>
@@ -145,6 +152,7 @@ singularity run --nv $sif_path \
     </tbody>
   </table>
 </div>
+
 
 ### Full Input Version: 
 - Trained with a comprehensive set of modalities including MPRAGE, FGATIR, T1 map, PD map, Multi-TI images, and diffusion-derived features as detailed in our paper.
