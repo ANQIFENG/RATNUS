@@ -16,20 +16,20 @@ Both version can complete segmentation in less than one minute.
  
 ## Installation 
 ### T1-weighted dual-input version:
-Install using Singularity with the following command:
+You can install using Singularity with the following command:
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dual:v1.0.0
 ```
-Alternatively, you can download the Singularity image directly from this [link](https://mega.nz/file/pvMRGJqb#3xlR-Wxolsq_s-V9bDtnVd25veFptmNXBXRsCPfOOTo).
+Alternatively, you can download the Singularity image directly from this [[link](https://mega.nz/file/pvMRGJqb#3xlR-Wxolsq_s-V9bDtnVd25veFptmNXBXRsCPfOOTo)].
 
 
 
 ### Full-input version:
-Install using Singularity with the following command:
+You can install using Singularity with the following command:
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v1.0.0
 ```
-Alternatively, you can download the Singularity image directly from this [link](https://mega.nz/file/06sVlAJK#RTNXOD3HKJa6liX19XBXq4ghOSGHmVsADRxjHJcZkX4).
+Alternatively, you can download the Singularity image directly from this [[link](https://mega.nz/file/06sVlAJK#RTNXOD3HKJa6liX19XBXq4ghOSGHmVsADRxjHJcZkX4)].
 
 
 ## Usage
@@ -111,7 +111,40 @@ singularity run --nv $sif_path \
     RATNUS assumes a spatial dimensions of 192x224x192.
   - **Inhomogeneity Correction or Bias Field Correction**
   - **Intensity Normalization**:
-    RATNUS uses [Fuzzy C-means White Matter Mean Normalization](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short).
+    RATNUS uses Fuzzy C-means White Matter Mean Normalization [[link](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short)].
+
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Preparation</th>
+      <th colspan="3">Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">MPRAGE</td>
+      <td style="text-align: left;" rowspan="2"> 
+        <ul>
+          <li>Registration to MNI Space</li>
+          <li>Inhomogeneity Correction </li>
+          <li>Intensity Normalization</li>
+        </ul>
+      </td>
+      <td style="text-align: center;">✅</td>
+      <td style="text-align: center;">✅</td>
+      <td style="text-align: center;">⭕️</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">FGATIR</td>
+      <td style="text-align: center;">✅</td>
+      <td style="text-align: center;">⭕️</td>
+      <td style="text-align: center;">✅</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### Full Input Version: 
 - Trained with a comprehensive set of modalities including MPRAGE, FGATIR, T1 map, PD map, Multi-TI images, and diffusion-derived features as detailed in our paper.
