@@ -114,7 +114,7 @@ singularity run --nv $sif_path \
     RATNUS uses Fuzzy C-means White Matter Mean Normalization [[link](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short)].
 
 <div style="text-align: center;">
-  <table  style="margin-left: auto; margin-right: auto;">>
+  <table>
     <thead>
       <tr>
         <th></th>
@@ -127,9 +127,9 @@ singularity run --nv $sif_path \
         <td style="text-align: center;">MPRAGE</td>
         <td style="text-align: left;" rowspan="2"> 
           <ul>
-            <li>Registration to MNI Space</li>
-            <li>Inhomogeneity Correction </li>
-            <li>Intensity Normalization</li>
+            <li>**Registration to MNI Space**: The data should be registered to the MNI space, with a resolution of 1mm isotropic.RATNUS assumes a spatial dimensions of 192x224x192.</li>
+            <li>**Inhomogeneity Correction or Bias Field Correction** </li>
+            <li>**Intensity Normalization**:RATNUS uses Fuzzy C-means White Matter Mean Normalization [[link](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short)].</li>
           </ul>
         </td>
         <td style="text-align: center;">✅</td>
