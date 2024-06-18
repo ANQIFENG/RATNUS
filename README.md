@@ -173,7 +173,7 @@ please refer to [smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/
         <td style="text-align: left;" rowspan="2"> 
           <ul>
               <li> The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. </li>
-              <li> However, to synthesize Multi-TI images effectively, these modalities must be processed together. Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps :warning:. </li>
+              <li> However, to synthesize Multi-TI images effectively, these modalities must be processed together. :warning: Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. </li>
               <li> Therefore, a harmonic bias field is employed for Bias Field Correction and consistent Intensity Normalization is applied to ensure uniformity.</li>
           </ul>
         </td>
