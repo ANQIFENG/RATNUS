@@ -105,14 +105,7 @@ singularity run --nv $sif_path \
 ## Input 
 ### T1w-Dual Input Version: 
 - Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
-
-- For optimal results, ensure that your test data is prepared as follows:
-  - **Registration to MNI Space**: The data should be registered to the MNI space, with a resolution of 1mm isotropic.
-    RATNUS assumes a spatial dimensions of 192x224x192.
-  - **Inhomogeneity Correction or Bias Field Correction**
-  - **Intensity Normalization**:
-    RATNUS uses Fuzzy C-means White Matter Mean Normalization [[link](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short)].
-
+- 
 <div style="text-align: center;">
   <table>
     <thead>
@@ -127,10 +120,10 @@ singularity run --nv $sif_path \
         <td style="text-align: center;">MPRAGE</td>
         <td style="text-align: left;" rowspan="2"> 
           <ul>
-            For optimal results, ensure that your test data is prepared as follows:
+            <p><u>For optimal results, ensure that your test data is prepared as follows:</u></p>
             <li><strong>Registration to MNI Space</strong>: The data should be registered to the MNI space, with a resolution of 1mm isotropic. RATNUS assumes a spatial dimension of 192x224x192.</li>
             <li><strong>Inhomogeneity Correction or Bias Field Correction</strong></li>
-            <li><strong>Intensity Normalization</strong>: RATNUS uses Fuzzy C-means White Matter Mean Normalization <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short" target="_blank">[link]</a>.</li>
+            <li><strong>Intensity Normalization</strong>: RATNUS uses Fuzzy C-means White Matter Mean Normalization <a href="https://github.com/jcreinhold/intensity-normalization" target="_blank">[link]</a>.</li>
           </ul>
         </td>
         <td style="text-align: center;">✅</td>
