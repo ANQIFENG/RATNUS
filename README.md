@@ -113,38 +113,38 @@ singularity run --nv $sif_path \
   - **Intensity Normalization**:
     RATNUS uses Fuzzy C-means White Matter Mean Normalization [[link](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/2513089/Evaluating-the-impact-of-intensity-normalization-on-MR-image-synthesis/10.1117/12.2513089.short)].
 
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th>Preparation</th>
-      <th colspan="3">Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center;">MPRAGE</td>
-      <td style="text-align: left;" rowspan="2"> 
-        <ul>
-          <li>Registration to MNI Space</li>
-          <li>Inhomogeneity Correction </li>
-          <li>Intensity Normalization</li>
-        </ul>
-      </td>
-      <td style="text-align: center;">✅</td>
-      <td style="text-align: center;">✅</td>
-      <td style="text-align: center;">⭕️</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">FGATIR</td>
-      <td style="text-align: center;">✅</td>
-      <td style="text-align: center;">⭕️</td>
-      <td style="text-align: center;">✅</td>
-    </tr>
-  </tbody>
-</table>
-
+<div style="display: flex; justify-content: center;">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Preparation</th>
+        <th colspan="3">Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center;">MPRAGE</td>
+        <td style="text-align: left;" rowspan="2"> 
+          <ul>
+            <li>Registration to MNI Space</li>
+            <li>Inhomogeneity Correction </li>
+            <li>Intensity Normalization</li>
+          </ul>
+        </td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">⭕️</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">FGATIR</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">⭕️</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Full Input Version: 
 - Trained with a comprehensive set of modalities including MPRAGE, FGATIR, T1 map, PD map, Multi-TI images, and diffusion-derived features as detailed in our paper.
