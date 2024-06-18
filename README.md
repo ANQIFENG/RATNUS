@@ -186,16 +186,20 @@ please refer to [smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/
       <tr>
         <td style="text-align: center;">T1&PD maps</td>
         <td style="text-align: left;">
-        <li> The T1 map and PD map within RATNUS are generated using a combined processing of MPRAGE and FGATIR images. </li>
+          <ul>
+            <li> The T1 map and PD map within RATNUS are generated using a combined processing of MPRAGE and FGATIR images. </li>
+          </ul>
         </td>
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
         <td style="text-align: center;">Multi-TI</td>
         <td style="text-align: left;">
-        <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
-        <li> Specifically, the Inversion Time (TI) for Multi-TI image ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
-              This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.</li>
+          <ul>
+          <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
+          <li> Specifically, the Inversion Time (TI) for Multi-TI image ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
+                This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.</li>
+          </ul>
         </td>
         <td style="text-align: center;">✅</td>
       </tr>
