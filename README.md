@@ -214,7 +214,7 @@ Additionally, the processing code can be found on [[dmri_pipeline_codes](https:/
 
 ## Outputs
 RATNUS generates a single NIfTI file in your predefined output directory. 
-The output file will maintain the same dimensions and resolution as your input data.
+The output segmentation will maintain the same dimensions and resolution as your input data.
 The output file name will end with one of the following suffixes based on the input version:
 
 - `_ratnus`: For the full-input version.
@@ -223,7 +223,7 @@ The output file name will end with one of the following suffixes based on the in
 - `_ratnus_fgatir`: If only FGATIR is used in the dual-input version.
 
 
-The output segmentation file labels 13 distinct thalamic nuclei, with `0` representing the background and `1-13` corresponding to specific nuclei labels as follows:
+The output segmentation labels 13 distinct thalamic nuclei, with `0` representing the background and `1-13` corresponding to specific nuclei labels as follows:
 - `1`: Anterior Nucleus (AN)
 - `2`: Central Lateral (CL)
 - `3`: Center Median (CM)
