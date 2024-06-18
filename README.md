@@ -142,22 +142,21 @@ singularity run --nv $sif_path \
 ### Full Input Version: 
 - Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
 
-- The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. 
-  However, to synthesize Multi-TI images effectively, these modalities must be processed together. 
-  Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps :warning:. 
-  Therefore, a harmonic bias field is employed for Bias Field Correction and consistent Intensity Normalization is applied to ensure uniformity.
 
 - **Structural MRI Processing Pipeline**:
   The T1 map and PD map within RATNUS are generated using a combined processing of MPRAGE and FGATIR images. 
   Following this, a series of Multi-TI images are synthesized. 
   Specifically, the Inversion Time (TI) for Multi-TI image ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
   This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.
-  To assist users, we have packaged the pipeline for synthesizing Multi-TI images from MPRAGE and FGATIR. 
+  
+
+To assist users, we have packaged the pipeline for synthesizing Multi-TI images from MPRAGE and FGATIR. 
   Inputting the raw MPRAGE and FGATIR will yield processed MPRAGE and FGATIR, T1 maps, PD maps, and the series of Multi-TI images.
-  please refer to [smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md).
- 
-- To assist users, we have documented the details of the diffusion data processing pipeline on [dmri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md). 
+
+To assist users, we have documented the details of the diffusion data processing pipeline on [dmri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md). 
   Additionally, the processing code can be found on [dmri_pipeline_codes](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline).
+please refer to [smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md).
+
 
 <div style="text-align: center;">
   <table>
@@ -173,10 +172,8 @@ singularity run --nv $sif_path \
         <td style="text-align: center;">MPRAGE</td>
         <td style="text-align: left;" rowspan="2"> 
           <ul>
-              <li> 
               <li> The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. </li>
-              <li> However, to synthesize Multi-TI images effectively, these modalities must be processed together. 
-                Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps :warning:. </li>
+              <li> However, to synthesize Multi-TI images effectively, these modalities must be processed together. Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps :warning:. </li>
               <li> Therefore, a harmonic bias field is employed for Bias Field Correction and consistent Intensity Normalization is applied to ensure uniformity.</li>
           </ul>
         </td>
@@ -189,12 +186,16 @@ singularity run --nv $sif_path \
       <tr>
         <td style="text-align: center;">T1&PD maps</td>
         <td style="text-align: left;">
+        <li> The T1 map and PD map within RATNUS are generated using a combined processing of MPRAGE and FGATIR images. </li>
         </td>
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
         <td style="text-align: center;">Multi-TI</td>
         <td style="text-align: left;">
+        <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
+        <li> Specifically, the Inversion Time (TI) for Multi-TI image ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
+              This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.</li>
         </td>
         <td style="text-align: center;">✅</td>
       </tr>
