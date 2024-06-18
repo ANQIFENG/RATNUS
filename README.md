@@ -105,7 +105,6 @@ singularity run --nv $sif_path \
 ## Input 
 ### T1w-Dual Input Version: 
 - Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
-- 
 <div style="text-align: center;">
   <table>
     <thead>
