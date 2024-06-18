@@ -105,6 +105,10 @@ singularity run --nv $sif_path \
 ## Input 
 ### T1w-Dual Input Version:
 Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
+
+If your MPRAGE and FGATIR have not undergone the following processing steps, 
+we recommend using [[smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md)] to get processed MPRAGE and FGATIR.
+
 <div style="text-align: center;">
   <table>
     <thead>
