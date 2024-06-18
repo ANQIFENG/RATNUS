@@ -20,7 +20,7 @@ You can install using Singularity with the following command:
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dual:v1.0.0
 ```
-Alternatively, you can download the Singularity image directly from this [[link](https://mega.nz/file/pvMRGJqb#3xlR-Wxolsq_s-V9bDtnVd25veFptmNXBXRsCPfOOTo)].
+Alternatively, you can download the Singularity image directly from this [[link](https://mega.nz/file/F2E1Fa4T#pg01iR4yN9rOQ2eEBzBCeBye-GVw7WN_n4TXOK3TdOc)].
 
 
 
@@ -29,7 +29,7 @@ You can install using Singularity with the following command:
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v1.0.0
 ```
-Alternatively, you can download the Singularity image directly from this [[link](https://mega.nz/file/06sVlAJK#RTNXOD3HKJa6liX19XBXq4ghOSGHmVsADRxjHJcZkX4)].
+Alternatively, you can download the Singularity image directly from this [[link](https://mega.nz/file/sjMh2LzT#LeN-Exsq1yy7jtec2QS43v1XRBUvwwEPW7zQfj7C0Mc)].
 
 
 ## Usage
@@ -215,11 +215,13 @@ Additionally, the processing code can be found on [[dmri_pipeline_codes](https:/
 ## Outputs
 RATNUS generates a single NIfTI file in your predefined output directory. 
 The output file will maintain the same dimensions and resolution as your input data.
+The output file name will end with one of the following suffixes based on the input version:
 
-For the full-input version, the output file name will end with `_ratnus`. 
-If you are using the T1-weighted dual-input version, the output file name will end with `_ratnus_dual`. 
-If only one modality is used in the dual-input version, the output file name will reflect the modality used, 
-ending with `_ratnus_mprage` if only MPRAGE is used, or `_ratnus_fgatir` if only FGATIR is used.
+- `_ratnus`: For the full-input version.
+- `_ratnus_dual`: If you are using the T1-weighted dual-input version.
+- `_ratnus_mprage`: If only MPRAGE is used in the dual-input version.
+- `_ratnus_fgatir`: If only FGATIR is used in the dual-input version.
+
 
 The output segmentation file labels 13 distinct thalamic nuclei, with `0` representing the background and `1-13` corresponding to specific nuclei labels as follows:
 - `1`: Anterior Nucleus (AN)
