@@ -143,13 +143,6 @@ singularity run --nv $sif_path \
 - Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
 
 
-- **Structural MRI Processing Pipeline**:
-  The T1 map and PD map within RATNUS are generated using a combined processing of MPRAGE and FGATIR images. 
-  Following this, a series of Multi-TI images are synthesized. 
-  Specifically, the Inversion Time (TI) for Multi-TI image ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
-  This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.
-  
-
 To assist users, we have packaged the pipeline for synthesizing Multi-TI images from MPRAGE and FGATIR. 
   Inputting the raw MPRAGE and FGATIR will yield processed MPRAGE and FGATIR, T1 maps, PD maps, and the series of Multi-TI images.
 
@@ -207,10 +200,7 @@ please refer to [smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/
         <td style="text-align: center;">Diffusion</td>
         <td style="text-align: left;">
           <ul>
-              <li>The diffusion-derived features within RATNUS include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map. 
-                  To assist users, we have documented the details of the diffusion data processing pipeline on
-                  <a href="https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md" target="_blank">[dmri_pipeline_descriptions]</a>.
-                  Additionally, the processing code can be found on <a href="https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md" target="_blank">[dmri_pipeline_codes]</a>.
+              <li>The diffusion-derived features within RATNUS include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map.
               </li>
           </ul>
         </td>
