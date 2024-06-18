@@ -177,7 +177,7 @@ please refer to [smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
-        <td style="text-align: center;">T1&PD maps</td>
+        <td style="text-align: center;">T1 & PD</td>
         <td style="text-align: left;">
           <ul>
             <li> The T1 map and PD map within RATNUS are generated using a combined processing of MPRAGE and FGATIR images. </li>
