@@ -6,7 +6,7 @@ RATNUS is a deep learning-based method for rapid and automatic segmentation of t
 Our approach efficiently segments 13 distinct nuclei classes, providing detailed insights into thalamic structure. 
 RATNUS comprises two components: 
 - Multimodal MRI Calculation 
-- Segmentation. 
+- Segmentation
 
 The Multimodal MRI Calculation takes less than 20 minutes, and the Segmentation, 
 with its two versions，a T1-weighted dual-input version, and a full-input version， completes in less than one minute. 
