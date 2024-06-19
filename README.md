@@ -67,7 +67,8 @@ singularity run -e --nv smri_pipeline.sif \
             --ti_step ${step_size_for_inversion_times_between_ti_min_and_ti_max} \
             --num_workers ${number_of_workers_for_parallel_processing} \
             --save_intermediate ${flag_to_save_intermediate_results}
- ```     
+ ```   
+For a detailed explanation of the parameters, see [[here](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#input)].
 
 Example bash script:
 ```bash
