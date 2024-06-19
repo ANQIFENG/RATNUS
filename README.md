@@ -320,9 +320,15 @@ The output directory (`/path/to/output`) is organized into four subdirectories:
 ``` 
 /path/to/output
     └── proc
+        └── [output NIfTI files]
     └── logs
+        └── [images-processing-pipeline]
+            └── [processing logs]
     └── qa
-    └── tmp
+        └── [images-processing-pipeline]
+            └── [QA images]
+    └── tmp # Only if save_intermediate=True
+        └── [temporary results
 ```
 
 - `proc`: This directory stores the output NIfTI files.
