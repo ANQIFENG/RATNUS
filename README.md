@@ -240,7 +240,7 @@ The pipeline contains:
         <td style="text-align: left;">
           <ul>
             <li>Repetition time (TR) for both your MPRAGE and FGATIR images.</li>
-            <li>For synthesizing Multi-TI images, the TR of MPRAGE and FGATIR must be equal. While TI values vary, TR should remain consistent to ensure image comparability. </li>
+            <li> For synthesizing Multi-TI images, the TR of MPRAGE and FGATIR must be equal. While TI values vary, TR should remain consistent to ensure image comparability. </li>
             <li> Used for T1/PD calculation and Multi-TI synthesis.</li>
           </ul>
         </td>
@@ -270,8 +270,11 @@ The pipeline contains:
         <td style="text-align: center;">ti_min</td>
         <td style="text-align: left;" rowspan="3"> 
           <ul>
-              <li> These parameters define the range and increments for synthesizing Multi-TI images. Specifically, `ti_min` sets the minimum inversion time, `ti_max` sets the maximum inversion time, and `ti_step` defines the increment between each TI value. </li>
-          </ul>
+              <li> These parameters define the range and increments for synthesizing Multi-TI images. Specifically, ti_min sets the minimum inversion time, ti_max sets the maximum inversion time, and ti_step defines the increment between each TI value. </li>
+              <li> The default values are 400 ms for ti_min, 1400 ms for ti_max, and 20 ms for ti_step</li>
+              <li> By varying the TI within this default range, a set of 51 images is generated. This range is chosen to maximize contrast in the thalamus, revealing its internal structure with enhanced clarity.</li>
+              <li> If the user does not provide values for these parameters, the defaults are used to generate the 51 images.</li>
+        </ul>
         </td>
         <td style="text-align: center;">🟡</td>
       </tr>
