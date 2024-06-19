@@ -471,7 +471,26 @@ For generating diffusion derived features, please refer to [[dMRI Processing Pip
 </div>
 
 ### Outputs
-RATNUS generates a single NIfTI file in your predefined output directory. 
+
+##### Output Structure
+The output directory (`/path/to/output`) is organized into four subdirectories:
+
+``` 
+/path/to/output
+    └── proc
+        └── [output NIfTI files]
+    └── logs
+        └── [thalamic-nuclei-segmentation]
+            └── [processing logs]
+    └── qa
+        └── [thalamic-nuclei-segmentation]
+            └── [QA images]
+    └── tmp 
+        └── [temporary results]
+```
+
+### Output Files
+The output NIfTI files will be found in `proc` directory.
 The output segmentation will maintain the same dimensions and resolution as your input data.
 The output file name will end with one of the following suffixes based on the input version:
 
