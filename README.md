@@ -168,6 +168,12 @@ singularity run --nv $sif_path \
 ```
 
 # About RATNUS :brain:
+
+# Multimodal MRI Calculation
+
+
+# Segmentation
+
 ## Input 
 ### T1w-Dual Input Version:
 Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
