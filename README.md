@@ -270,7 +270,7 @@ The pipeline contains:
         <td style="text-align: center;">ti_min</td>
         <td style="text-align: left;" rowspan="3"> 
           <ul>
-              <li> The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. </li>
+              <li> These parameters define the range and increments for synthesizing Multi-TI images. Specifically, `ti_min` sets the minimum inversion time, `ti_max` sets the maximum inversion time, and `ti_step` defines the increment between each TI value. </li>
           </ul>
         </td>
         <td style="text-align: center;">🟡</td>
