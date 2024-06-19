@@ -66,7 +66,7 @@ singularity run --nv ratnus.sif \
             --ti_max ${maximum_inversion_time_for_synthesizing_multi_ti_images} \
             --ti_step ${step_size_for_inversion_times_between_ti_min_and_ti_max} \
             --num_workers ${number_of_workers_for_parallel_processing} \
-            --save_intermediate
+            --save_intermediate ${Flag to save intermediate results}
  ```         
 
 
