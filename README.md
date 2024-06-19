@@ -327,8 +327,8 @@ The output directory (`/path/to/output`) is organized into four subdirectories:
     └── qa
         └── [images-processing-pipeline]
             └── [QA images]
-    └── tmp # Only if save_intermediate=True
-        └── [temporary results
+    └── tmp 
+        └── [temporary results]
 ```
 
 - `proc`: This directory stores the output NIfTI files.
