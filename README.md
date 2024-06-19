@@ -21,7 +21,16 @@ with its two versions，a T1-weighted dual-input version and a full-input versio
 
 
 ## Installation 
-### T1-weighted dual-input version:
+### Multimodal MRI Calculation
+You can install using Singularity with the following command:
+```bash
+singularity pull --docker-login docker://registry.gitlab.com/anqifeng/smri_pipeline:v1.0.0
+```
+Alternatively, you can download the Singularity image directly from this [[link](https://mega.nz/file/QzcXmIjK#oJvzHiriYlNroSfR6cp5pWFShmFEoeaPU1l8apmZGp4)].
+
+
+### Segmentation
+#### T1-weighted dual-input version:
 You can install using Singularity with the following command:
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dual:v1.0.0
@@ -29,8 +38,7 @@ singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dua
 Alternatively, you can download the Singularity image directly from this [[link](https://mega.nz/file/F2E1Fa4T#pg01iR4yN9rOQ2eEBzBCeBye-GVw7WN_n4TXOK3TdOc)].
 
 
-
-### Full-input version:
+#### Full-input version:
 You can install using Singularity with the following command:
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v1.0.0
