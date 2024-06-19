@@ -315,7 +315,7 @@ This repository's Singularity containers are built based on [[Radifox](https://g
 and our file organization follows the rules outlined in Radifox.
 
 ##### Output Structure
-The output directory (`/path/to/out/dir`) is organized into four subdirectories:
+The output directory (`/path/to/output`) is organized into four subdirectories:
 
 ``` 
 /path/to/output
@@ -324,6 +324,7 @@ The output directory (`/path/to/out/dir`) is organized into four subdirectories:
     └── qa
     └── tmp
 ```
+
 - `proc`: This directory stores the output NIfTI files.
 - `log`: This directory stores the logs from the processing steps.
 - `qa`: This directory stores the images for Quality Assurance (QA).
