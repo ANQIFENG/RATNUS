@@ -451,7 +451,8 @@ For generating diffusion derived features, please refer to [[dMRI Processing Pip
           <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
           <li> Specifically, the Inversion Time (TI) for Multi-TI image ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
                 This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.</li>
-          </ul>
+          <li> The input assumes that the 51 images are combined into a single NIfTI file with 51 channels.</li>     
+        </ul>
         </td>
         <td style="text-align: center;">✅</td>
       </tr>
@@ -459,9 +460,9 @@ For generating diffusion derived features, please refer to [[dMRI Processing Pip
         <td style="text-align: center;">Diffusion</td>
         <td style="text-align: left;">
           <ul>
-              <li>The diffusion-derived features include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map.
-              </li>
-          </ul>
+              <li>The diffusion-derived features include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map.</li>
+              <li>The input assumes these features are combined into a single NIfTI file with 13 channels</li>      
+        </ul>
         </td>
         <td style="text-align: center;">✅</td>
       </tr>
