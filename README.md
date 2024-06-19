@@ -15,8 +15,11 @@ with its two versions，a T1-weighted dual-input version and a full-input versio
 # How to run :runner:
 ## Prerequisites
 - **Operating System:** Linux or OSX
-- **Hardware:** NVIDIA GPU + CUDA CuDNN recommended for optimal performance; CPU mode is also supported.
- 
+- **Hardware:**
+  - Multimodal MRI Calculation: GPU is required.
+  - Segmentation: GPU is recommended for optimal performance; CPU mode is also supported
+
+
 ## Installation 
 ### T1-weighted dual-input version:
 You can install using Singularity with the following command:
