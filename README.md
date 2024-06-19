@@ -473,7 +473,7 @@ For generating diffusion derived features, please refer to [[dMRI Processing Pip
 ### Outputs
 
 #### Output Structure
-The output directory (`/path/to/output`) is organized into four subdirectories:
+The output directory (`/path/to/output`) is organized into three subdirectories:
 
 ``` 
 /path/to/output
@@ -485,8 +485,6 @@ The output directory (`/path/to/output`) is organized into four subdirectories:
     └── qa
         └── [thalamic-nuclei-segmentation]
             └── [QA images]
-    └── tmp 
-        └── [temporary results]
 ```
 
 #### Output Files
