@@ -426,15 +426,15 @@ Our T2 images are in MNI space with 1mm resolution, and have undergone N4 bias f
 
 The output files relevant for our analysis are:
 
-- `*_DT_FA.nii` - Fractional Anisotropy (FA)
-- `*_DT_AD.nii` - Axial Diffusivity (AD)
-- `*_DT_RD.nii` - Radial Diffusivity (RD)
-- `*_DT_TR.nii` - Trace
-- `*_DT_WL.nii` - Linear Anisotropy (WL)
-- `*_DT_WP.nii` - Planar Anisotropy (WP)
-- `*_DT_WS.nii` - Spheric Anisotropy (WS)
-- `*_knutsson_5D.nii` - Knutsson 5D Vector
-- `*_knutsson_edgemap.nii` - Knutsson Edge Map
+- `*_DT_FA.nii`: Fractional Anisotropy (FA)
+- `*_DT_AD.nii`: Axial Diffusivity (AD)
+- `*_DT_RD.nii`: Radial Diffusivity (RD)
+- `*_DT_TR.nii`: Trace
+- `*_DT_WL.nii`: Linear Anisotropy (WL)
+- `*_DT_WP.nii`: Planar Anisotropy (WP)
+- `*_DT_WS.nii`: Spheric Anisotropy (WS)
+- `*_knutsson_5D.nii`: Knutsson 5D Vector
+- `*_knutsson_edgemap.nii`: Knutsson Edge Map
 
 
 ## Segmentation
