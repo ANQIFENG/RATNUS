@@ -472,7 +472,7 @@ For generating diffusion derived features, please refer to [[dMRI Processing Pip
 
 ### Outputs
 
-##### Output Structure
+#### Output Structure
 The output directory (`/path/to/output`) is organized into four subdirectories:
 
 ``` 
@@ -489,7 +489,7 @@ The output directory (`/path/to/output`) is organized into four subdirectories:
         └── [temporary results]
 ```
 
-### Output Files
+#### Output Files
 The output NIfTI files will be found in `proc` directory.
 The output segmentation will maintain the same dimensions and resolution as your input data.
 The output file name will end with one of the following suffixes based on the input version:
@@ -499,7 +499,7 @@ The output file name will end with one of the following suffixes based on the in
 - `_ratnus_mprage`: If only MPRAGE is used in the dual-input version.
 - `_ratnus_fgatir`: If only FGATIR is used in the dual-input version.
 
-
+#### Label and Color Tabel
 The output segmentation labels 13 distinct thalamic nuclei, with `0` representing the background and `1-13` corresponding to specific nuclei labels as follows:
 - `1`: Anterior Nucleus (AN)
 - `2`: Central Lateral (CL)
