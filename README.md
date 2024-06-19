@@ -364,7 +364,7 @@ Below is a list of the output files and their descriptions:
 Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
 
 If your MPRAGE and FGATIR have not undergone the following processing steps, 
-we recommend using [[smri_pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#multimodal-mri-calculation)] to get processed MPRAGE and FGATIR.
+we recommend using [[sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#multimodal-mri-calculation)] to get processed MPRAGE and FGATIR.
 
 <div style="text-align: center;">
   <table>
@@ -439,7 +439,7 @@ For generating diffusion derived features, please refer to [[dMRI Processing Pip
         <td style="text-align: center;">T1 & PD</td>
         <td style="text-align: left;">
           <ul>
-            <li> The T1 map and PD map within RATNUS are generated using a combined processing of MPRAGE and FGATIR images. </li>
+            <li> The T1 map and PD map are generated using a combined processing of MPRAGE and FGATIR images. </li>
           </ul>
         </td>
         <td style="text-align: center;">✅</td>
@@ -459,7 +459,7 @@ For generating diffusion derived features, please refer to [[dMRI Processing Pip
         <td style="text-align: center;">Diffusion</td>
         <td style="text-align: left;">
           <ul>
-              <li>The diffusion-derived features within RATNUS include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map.
+              <li>The diffusion-derived features include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map.
               </li>
           </ul>
         </td>
