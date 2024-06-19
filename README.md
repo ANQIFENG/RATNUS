@@ -179,6 +179,28 @@ For MPRAGE, FGATIR, and diffusion images, we employ different processing methods
 - For MPRAGE and FGATIR, the processing and subsequent image calculations are packaged into a Singularity container. 
 - For diffusion images, we primarily use TORTOISE and custom scripts to process and calculate scalar maps.
 
+### sMRI Processing Pipeline
+We have packaged the entire pipeline into the [[Singularity Container](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#multimodal-mri-calculation)].
+
+The pipeline contains:
+- HD-BET Brain Extraction
+- Registration to MNI space
+- N4 Bias Field Correction
+  - Calculate N4 Bias Field for MPRAGE and FGATIR
+  - Calculate Harmonic Bias Field based on the Bias Fields of MPRAGE and FGATIR
+  - Perform Bias Field Correction using the Harmonic Bias Field
+- Calculate Background Mask
+- Calculate White Matter Mask
+- Fuzzy C-means White Matter Mean Normalization [link](https://github.com/jcreinhold/intensity-normalization):
+  - Perform Intensity Normalization using the same normalization factor to normalize MPRAGE and FGATIR
+- Calculate T1 and PD maps
+- Synthesize Multi-TI images from T1 and PD maps 
+
+#### Input 
+
+
+
+### dMRI Processing Pipeline
 
 
 ## Segmentation
