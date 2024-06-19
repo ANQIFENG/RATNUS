@@ -273,7 +273,6 @@ The pipeline contains:
               <li> These parameters define the range and increments for synthesizing Multi-TI images. Specifically, ti_min sets the minimum inversion time, ti_max sets the maximum inversion time, and ti_step defines the increment between each TI value. </li>
               <li> The default values are 400 ms for ti_min, 1400 ms for ti_max, and 20 ms for ti_step</li>
               <li> By varying the TI within this default range, a set of 51 images is generated. This range is chosen to maximize contrast in the thalamus, revealing its internal structure with enhanced clarity.</li>
-              <li> If the user does not provide values for these parameters, the defaults are used to generate the 51 images.</li>
         </ul>
         </td>
         <td style="text-align: center;">🟡</td>
@@ -290,7 +289,8 @@ The pipeline contains:
         <td style="text-align: center;">num_workers</td>
         <td style="text-align: left;">
           <ul>
-          <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
+          <li> Number of CPU cores for parallel processing.</li>
+          <li> The default value is 8.</li>
           </ul>
         </td>
         <td style="text-align: center;">🟡</td>
@@ -299,8 +299,9 @@ The pipeline contains:
         <td style="text-align: center;">save_intermediate</td>
         <td style="text-align: left;">
           <ul>
-          <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
-          </ul>
+          <li> Flag to save intermediate results. Boolean value, can be True or False. </li>
+          <li> The default value is False.</li>    
+        </ul>
         </td>
         <td style="text-align: center;">🟡</td>
       </tr>
