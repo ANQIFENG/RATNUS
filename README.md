@@ -67,7 +67,40 @@ singularity run -e --nv smri_pipeline.sif \
             --ti_step ${step_size_for_inversion_times_between_ti_min_and_ti_max} \
             --num_workers ${number_of_workers_for_parallel_processing} \
             --save_intermediate ${flag_to_save_intermediate_results}
- ```         
+ ```     
+
+Example bash script:
+```bash
+#!/bin/bash
+
+# Define paths to your data, output directory and singularity image
+mprage_path="./MTBI-MRCON0001_v1_T1w.nii.gz"
+fgatir_path="./MTBI-MRCON0001_v1_FGATIR.nii.gz"
+output_dir="./ratnus_outputs"
+sif_path="./smri_pipeline_v1.0.0.sif"
+repetition_time=4000.0 # ms
+inversion_time_mprage=1400.0 # ms
+inversion_time_fgatir=400.0 # ms
+inversion_time_min=400.0 # ms
+inversion_time_max=1400.0 # ms
+inversion_time_step=20.0 # ms
+num_workers=8
+whether_save_intermediate=False #bool
+
+# Run the RATNUS model with GPU support 
+singularity run --nv $sif_path \
+                --mprage ${mprage_path} \
+                --fgatir ${fgatir_path} \
+                --out_dir ${output_dir} \
+                --tr ${repetition_time} \
+                --ti_mprage ${inversion_time_mprage} \
+                --ti_fgatir ${inversion_time_fgatir} \
+                --ti_min ${inversion_time_min} \
+                --ti_max ${inversion_time_max} \
+                --ti_step ${inversion_time_step} \
+                --num_workers ${num_workers} \
+                --save_intermediate ${whether_save_intermediate}
+```
 
 
 ### Segmentation
@@ -120,7 +153,7 @@ pdmap_path="./MTBI-MRCON0001_v1_pdmap.nii.gz"
 multiTI_path="./MTBI-MRCON0001_v1_multiTI.nii.gz"
 diffusion_path="./MTBI-MRCON0001_v1_diffusion_features.nii.gz"
 out_dir="./ratnus_outputs"
-sif_path="./ratnus_v7.0.0.sif"
+sif_path="./ratnus_v1.0.0.sif"
 
 
 # Run the RATNUS model with GPU support 
