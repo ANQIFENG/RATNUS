@@ -345,13 +345,13 @@ Below is a list of the output files and their descriptions:
 - `*_transform.mat`: Transformation matrix for MPRAGE and FGATIR registration.
 - `*_n4sqrt.nii.gz`: MPRAGE and FGATIR images after N4 bias field correction.
 - `*_bias.nii.gz`: Bias field for MPRAGE and FGATIR images.
-- `_harmonic_bias.nii.gz`: Harmonic bias field.
+- `*_harmonic_bias.nii.gz`: Harmonic bias field.
 - `*_wmn.nii.gz`: MPRAGE and FGATIR images after white matter mean normalization. Finish processing stage, ready for further calculations such as PD and T1 map synthesis.
-- `_wm_mask.nii.gz`: White matter mask in MNI space.
-- `_bg_mask.nii.gz`: Background mask in MNI space.
-- `_brain_mask.nii.gz`: Brain mask in MNI space.
-- `_t1_map.nii.gz`: T1 map.
-- `_pd_map.nii.gz`: PD map.
+- `*_wm_mask.nii.gz`: White matter mask in MNI space.
+- `*_bg_mask.nii.gz`: Background mask in MNI space.
+- `*_brain_mask.nii.gz`: Brain mask in MNI space.
+- `*_t1_map.nii.gz`: T1 map.
+- `*_pd_map.nii.gz`: PD map.
 - `multi-ti/synT1_xxx.nii.gz`: Multi-TI images, where `xxx` represents the TI value.
 
 ### dMRI Processing Pipeline
@@ -448,10 +448,10 @@ For generating diffusion derived features, please refer to [[dMRI Processing Pip
         <td style="text-align: center;">Multi-TI</td>
         <td style="text-align: left;">
           <ul>
-          <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
+          <li>Following the T1&PD maps calculation, a series of Multi-TI images are synthesized. </li>
           <li> Specifically, the Inversion Time (TI) for Multi-TI image ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
                 This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.</li>
-          <li> The input assumes that the 51 images are combined into a single NIfTI file with 51 channels.</li>     
+          <li> The input requires combining 51 images into a single NIfTI file with 51 channels.</li>     
         </ul>
         </td>
         <td style="text-align: center;">✅</td>
@@ -461,7 +461,7 @@ For generating diffusion derived features, please refer to [[dMRI Processing Pip
         <td style="text-align: left;">
           <ul>
               <li>The diffusion-derived features include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map.</li>
-              <li>The input assumes these features are combined into a single NIfTI file with 13 channels</li>      
+              <li>The input requires combining these features into a single NIfTI file with 13 channels</li>      
         </ul>
         </td>
         <td style="text-align: center;">✅</td>
