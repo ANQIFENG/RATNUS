@@ -197,7 +197,7 @@ The pipeline contains the following steps in sequence:
 - Calculate T1 and PD maps
 - Synthesize Multi-TI images from T1 and PD maps 
 
-#### Input 
+#### Inputs 
 <div style="text-align: center;">
   <table>
     <thead>
@@ -310,7 +310,7 @@ The pipeline contains the following steps in sequence:
 </div>
 ✅ indicates required parameters. 🟡 indicates parameters with default values. If not provided, the default values will be used.
 
-#### Output 
+#### Outputs 
 This repository's Singularity containers are built based on [[Radifox](https://github.com/jh-mipc/radifox?tab=readme-ov-file#processingmodule)], 
 and our file organization follows the rules outlined in Radifox.
 
@@ -359,7 +359,7 @@ Below is a list of the output files and their descriptions:
 
 ## Segmentation
 
-### Input 
+### Inputs 
 #### T1w-Dual Input Version:
 Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
 
