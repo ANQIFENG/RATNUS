@@ -354,9 +354,6 @@ Below is a list of the output files and their descriptions:
 - `_pd_map.nii.gz`: PD map.
 - `multi-ti/synT1_xxx.nii.gz`: Multi-TI images, where `xxx` represents the TI value.
 
-
-
-
 ### dMRI Processing Pipeline
 
 
@@ -367,7 +364,7 @@ Below is a list of the output files and their descriptions:
 Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
 
 If your MPRAGE and FGATIR have not undergone the following processing steps, 
-we recommend using [[smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md)] to get processed MPRAGE and FGATIR.
+we recommend using [[smri_pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#multimodal-mri-calculation)] to get processed MPRAGE and FGATIR.
 
 <div style="text-align: center;">
   <table>
@@ -386,7 +383,7 @@ we recommend using [[smri_pipeline_descriptions](https://github.com/ANQIFENG/RAT
             <p><u>For optimal results, ensure that your test data is prepared as follows:</u></p>
             <li><strong>Registration to MNI Space</strong>: The data should be registered to the MNI space, with a resolution of 1mm isotropic. RATNUS assumes a spatial dimension of 192x224x192.</li>
             <li><strong>Inhomogeneity Correction or Bias Field Correction</strong></li>
-            <li><strong>Intensity Normalization</strong>: RATNUS uses Fuzzy C-means White Matter Mean Normalization <a href="https://github.com/jcreinhold/intensity-normalization" target="_blank">[link]</a>.</li>
+            <li><strong>Intensity Normalization</strong></li>
           </ul>
         </td>
         <td style="text-align: center;">✅</td>
@@ -402,6 +399,7 @@ we recommend using [[smri_pipeline_descriptions](https://github.com/ANQIFENG/RAT
     </tbody>
   </table>
 </div>
+✅ indicates required; ⭕ indicates not required.
 
 #### Full Input Version: 
 Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
