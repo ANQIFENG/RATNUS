@@ -169,13 +169,13 @@ singularity run --nv $sif_path \
 
 # About RATNUS :brain:
 
-# Multimodal MRI Calculation
+## Multimodal MRI Calculation
 
 
-# Segmentation
+## Segmentation
 
-## Input 
-### T1w-Dual Input Version:
+### Input 
+#### T1w-Dual Input Version:
 Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
 
 If your MPRAGE and FGATIR have not undergone the following processing steps, 
@@ -215,7 +215,7 @@ we recommend using [[smri_pipeline_descriptions](https://github.com/ANQIFENG/RAT
   </table>
 </div>
 
-### Full Input Version: 
+#### Full Input Version: 
 Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
 
 The T1 map, PD map and Multi-TI images are calculated from raw MPRAGE and FGATIR images. To assist users, we have packaged the whole pipeline
@@ -284,7 +284,7 @@ Additionally, the processing code can be found on [[dmri_pipeline_codes](https:/
   </table>
 </div>
 
-## Outputs
+### Outputs
 RATNUS generates a single NIfTI file in your predefined output directory. 
 The output segmentation will maintain the same dimensions and resolution as your input data.
 The output file name will end with one of the following suffixes based on the input version:
