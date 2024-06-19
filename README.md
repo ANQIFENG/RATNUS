@@ -237,11 +237,7 @@ The pipeline contains:
       </tr>
       <tr>
         <td style="text-align: center;" rowspan="2">ti_mprage</td>
-        <td style="text-align: left;">
-          <ul>
-              <li>The diffusion-derived features within RATNUS include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map.</li>
-          </ul>
-        </td>
+        <td style="text-align: left;"></td>
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
