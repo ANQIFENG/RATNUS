@@ -191,7 +191,7 @@ The pipeline contains:
   - Perform Bias Field Correction using the Harmonic Bias Field
 - Calculate Background Mask
 - Calculate White Matter Mask
-- Fuzzy C-means White Matter Mean Normalization [link](https://github.com/jcreinhold/intensity-normalization):
+- Fuzzy C-means White Matter Mean Normalization [[link](https://github.com/jcreinhold/intensity-normalization)]:
   - Perform Intensity Normalization using the same normalization factor to normalize MPRAGE and FGATIR
 - Calculate T1 and PD maps
 - Synthesize Multi-TI images from T1 and PD maps 
