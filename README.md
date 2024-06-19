@@ -236,8 +236,8 @@ The pipeline contains:
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
-        <td style="text-align: center;" rowspan="2">ti_mprage</td>
-        <td style="text-align: left;"></td>
+        <td style="text-align: center;">ti_mprage</td>
+        <td style="text-align: left;" rowspan="2"></td>
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
