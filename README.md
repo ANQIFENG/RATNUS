@@ -55,7 +55,7 @@ All input data files are expected to be in NIfTI format (`.nii` or `.nii.gz`).
 ### Multimodal MRI Calculation
 Command:
 ```bash
-singularity run --nv ratnus.sif \
+singularity run -e --nv smri_pipeline.sif \
             --mprage ${path_to_your_mprage_image} \
             --fgatir ${path_to_your_fgatir_image} \
             --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored} \
