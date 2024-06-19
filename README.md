@@ -355,7 +355,6 @@ Below is a list of the output files and their descriptions:
 - `multi-ti/synT1_xxx.nii.gz`: Multi-TI images, where `xxx` represents the TI value.
 
 ### dMRI Processing Pipeline
-We mainly use [TORTOISE](https://tortoise.nibib.nih.gov/tortoise) to process the diffusion images and calculate scalar maps.
 The scripts of dMRI processing pipeline can be found in: [RATNUS - DMRI Pipeline](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline).
 
 
@@ -373,7 +372,6 @@ The pipeline consists of two main steps:
 
 2. **Step 01: Calculating Knutsson 5D Vectors and Edge Map**
    - This step uses the eigenvector calculated from step00 to compute the Knutsson 5D vectors and the edge map. 
-
 
 
 #### Data Structure
@@ -400,16 +398,7 @@ mtbi_study/
 │ ├── nii/
 │ └── proc/
 ├── MTBI-0002/
-│ ├── v1/
-│ │ ├── nii/
-│ │ └── proc/
-│ ├── v2/
-│ │ ├── nii/
-│ │ └── proc/
-│ └── v3/
-│ ├── nii/
-│ └── proc/
-...
+│ ...
 ``````
 
 #### Data Description
@@ -431,7 +420,7 @@ The B0 image in PA view is only used for EPI distortion correction in Tortoise D
 All images are collected using a 3T Siemens Prisma scanner.
 
 Additionally, T2-weighted images are required in the step00, specifically the DIFFPREP and DRBUDDI modules. 
-Our T2 images are in MNI space with 1mm resolution,  and have undergone N4 bias field correction and white matter mean normalization.
+Our T2 images are in MNI space with 1mm resolution, and have undergone N4 bias field correction and white matter mean normalization.
 
 ####  Expected output
 
@@ -446,6 +435,7 @@ The output files relevant for our analysis are:
 - `*_DT_WS.nii` - Spheric Anisotropy (WS)
 - `*_knutsson_5D.nii` - Knutsson 5D Vector
 - `*_knutsson_edgemap.nii` - Knutsson Edge Map
+
 
 ## Segmentation
 
