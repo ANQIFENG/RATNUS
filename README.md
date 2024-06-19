@@ -197,6 +197,96 @@ The pipeline contains:
 - Synthesize Multi-TI images from T1 and PD maps 
 
 #### Input 
+<div style="text-align: center;">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Preparation</th>
+        <th >Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center;">mprage</td>
+        <td style="text-align: left;" rowspan="3"> 
+          <ul>
+              <li> The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. </li>
+              <li> However, to synthesize Multi-TI images effectively, these modalities must be processed together. :warning: Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. </li>
+              <li> Therefore, a harmonic bias field is employed for Bias Field Correction and consistent Intensity Normalization is applied to ensure uniformity.</li>
+          </ul>
+        </td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">fgatir</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">out_dir</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">tr</td>
+        <td style="text-align: left;">
+          <ul>
+          <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
+          </ul>
+        </td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;" rowspan="2">ti_mprage</td>
+        <td style="text-align: left;">
+          <ul>
+              <li>The diffusion-derived features within RATNUS include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map.</li>
+          </ul>
+        </td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">ti_fgatir</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">ti_min</td>
+        <td style="text-align: left;" rowspan="3"> 
+          <ul>
+              <li> The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. </li>
+          </ul>
+        </td>
+        <td style="text-align: center;">🟡</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">ti_max</td>
+        <td style="text-align: center;">🟡</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">ti_step</td>
+        <td style="text-align: center;">🟡</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">num_workers</td>
+        <td style="text-align: left;">
+          <ul>
+          <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
+          </ul>
+        </td>
+        <td style="text-align: center;">🟡</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">save_intermediate</td>
+        <td style="text-align: left;">
+          <ul>
+          <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
+          </ul>
+        </td>
+        <td style="text-align: center;">🟡</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 
 
