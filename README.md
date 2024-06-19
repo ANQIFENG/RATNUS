@@ -48,11 +48,30 @@ Alternatively, you can download the Singularity image directly from this [[link]
 
 ## Usage
 To run the RATNUS model using the Singularity image, use the following command. 
-Replace the placeholder paths with the actual paths to your input files and specify the directory for the output:
+Replace the placeholder paths with the actual paths to your input files and specify the output directory.
 If you are using a CPU, you can remove the `--nv` option from the command.
 All input data files are expected to be in NIfTI format (`.nii` or `.nii.gz`).
 
-### T1-weighted dual-input version:
+### Multimodal MRI Calculation
+Command:
+```bash
+singularity run --nv ratnus.sif \
+            --mprage ${path_to_your_mprage_image} \
+            --fgatir ${path_to_your_fgatir_image} \
+            --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored} \
+            --tr ${repetition_time_for_your_mprage_and_fgatir_images} \
+            --ti_mprage ${inversion_time_for_your_mprage_image} \
+            --ti_fgatir ${inversion_time_for_your_fgatir_image} \
+            --ti_min ${minimum_inversion_time_for_synthesizing_multi_ti_images} \
+            --ti_max ${maximum_inversion_time_for_synthesizing_multi_ti_images} \
+            --ti_step ${step_size_for_inversion_times_between_ti_min_and_ti_max} \
+            --num_workers ${number_of_workers_for_parallel_processing} \
+            --save_intermediate
+ ```         
+
+
+### Segmentation
+#### T1-weighted dual-input version:
 We use MPRAGE and FGATIR as normal inputs, 
 and support missing modalities where only MPRAGE or only FGATIR is available.
 
@@ -76,7 +95,7 @@ singularity run --nv ratnus_dual.sif \
             --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
  ```   
 
-###  Full-input version:
+#### Full-input version:
 Command:
 ```bash
 singularity run --nv ratnus.sif \
