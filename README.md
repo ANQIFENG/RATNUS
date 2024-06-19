@@ -341,17 +341,12 @@ RATNUS generates multiple output NIfTI files in `proc` directory.
 The output file names have specific suffixes that represent their content. 
 Below is a list of the output files and their descriptions:
 
-- `_mprage_reg_thre.nii.gz`: MPRAGE image registered to MNI space.
-- `_fgatir_reg_thre.nii.gz`: FGATIR image registered to MNI space.
-- `_mprage_transform.mat`: Transformation matrix for MPRAGE registration.
-- `_fgatir_transform.mat`: Transformation matrix for FGATIR registration.
-- `_mprage_n4sqrt.nii.gz`: MPRAGE image after N4 bias field correction.
-- `_fgatir_n4sqrt.nii.gz`: FGATIR image after N4 bias field correction.
-- `_mprage_bias_field.nii.gz`: Bias field for MPRAGE image.
-- `_fgatir_bias_field.nii.gz`: Bias field for FGATIR image.
-- `_harmonic_bias_field.nii.gz`: Harmonic bias field.
-- `_mprage_wmn.nii.gz`: MPRAGE image after white matter mean normalization. Finish processing stage, ready for further calculations such as PD and T1 map synthesis.
-- `_fgatir_wmn.nii.gz`: FGATIR image after white matter mean normalization. Finish processing stage, ready for further calculations such as PD and T1 map synthesis.
+- `*_reg_thre.nii.gz`: MPRAGE and FGATIR images registered to MNI space.
+- `*_transform.mat`: Transformation matrix for MPRAGE and FGATIR registration.
+- `*_n4sqrt.nii.gz`: MPRAGE and FGATIR images after N4 bias field correction.
+- `*_bias.nii.gz`: Bias field for MPRAGE and FGATIR images.
+- `_harmonic_bias.nii.gz`: Harmonic bias field.
+- `*_wmn.nii.gz`: MPRAGE and FGATIR images after white matter mean normalization. Finish processing stage, ready for further calculations such as PD and T1 map synthesis.
 - `_wm_mask.nii.gz`: White matter mask in MNI space.
 - `_bg_mask.nii.gz`: Background mask in MNI space.
 - `_brain_mask.nii.gz`: Brain mask in MNI space.
