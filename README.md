@@ -168,6 +168,11 @@ singularity run --nv $sif_path \
 ```
 
 # About RATNUS :brain:
+RATNUS comprises two main components: Multimodal MRI Calculation and Segmentation. 
+First, we process and calculate multi-modality images from raw MPRAGE, FGATIR, and diffusion images. 
+These multi-modality images include processed MPRAGE, processed FGATIR, T1/PD maps, Multi-TI images, and diffusion-derived features. 
+These images are used because they provide excellent contrast within the thalamus. 
+Next, we combine these images as inputs for segmentation, enabling rapid and accurate segmentation of 13 thalamic nuclei.
 
 ## Multimodal MRI Calculation
 
