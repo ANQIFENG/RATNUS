@@ -175,6 +175,10 @@ These images are used because they provide excellent contrast within the thalamu
 Next, we combine these images as inputs for segmentation, enabling rapid and accurate segmentation of 13 thalamic nuclei.
 
 ## Multimodal MRI Calculation
+For MPRAGE, FGATIR, and diffusion images, we employ different processing methods. 
+- For MPRAGE and FGATIR, the processing and subsequent image calculations are packaged into a Singularity container. 
+- For diffusion images, we primarily use TORTOISE and custom scripts to process and calculate scalar maps.
+
 
 
 ## Segmentation
