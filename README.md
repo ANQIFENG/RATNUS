@@ -210,28 +210,37 @@ The pipeline contains:
     <tbody>
       <tr>
         <td style="text-align: center;">mprage</td>
-        <td style="text-align: left;" rowspan="3"> 
+        <td style="text-align: left;"> 
           <ul>
-              <li> The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. </li>
-              <li> However, to synthesize Multi-TI images effectively, these modalities must be processed together. :warning: Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. </li>
-              <li> Therefore, a harmonic bias field is employed for Bias Field Correction and consistent Intensity Normalization is applied to ensure uniformity.</li>
+              <li> Path to your MPRAGE image file. </li>
           </ul>
         </td>
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
         <td style="text-align: center;">fgatir</td>
+        <td style="text-align: left;"> 
+          <ul>
+              <li> Path to your FGATIR image file. </li>
+          </ul>
+        </td>
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
         <td style="text-align: center;">out_dir</td>
+        <td style="text-align: left;"> 
+          <ul>
+              <li> Path to the directory where you want the output to be stored. </li>
+          </ul>
+        </td>
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
         <td style="text-align: center;">tr</td>
         <td style="text-align: left;">
           <ul>
-          <li>Following the T1&PD maps caluclation, a series of Multi-TI images are synthesized. </li>
+          <li>Repetition time (TR) for both your MPRAGE and FGATIR images.</li>
+          <li>For synthesizing Multi-TI images, the TR of MPRAGE and FGATIR must be equal. While TI values vary, TR should remain consistent to ensure image comparability. </li>
           </ul>
         </td>
         <td style="text-align: center;">✅</td>
