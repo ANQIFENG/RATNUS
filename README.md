@@ -404,11 +404,9 @@ we recommend using [[smri_pipeline](https://github.com/ANQIFENG/RATNUS?tab=readm
 #### Full Input Version: 
 Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
 
-The T1 map, PD map and Multi-TI images are calculated from raw MPRAGE and FGATIR images. To assist users, we have packaged the whole pipeline
-into a Singularity Container, please refer to [[smri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_multi-TI.md)].
+For calculating T1 map, PD map and Multi-TI images, please refer to [[sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#smri-processing-pipeline)]. 
+For generating diffusion derived features, please refer to [[dMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#dmri-processing-pipeline)]. 
 
-For diffusion derived features, we have also documented the details of the diffusion data processing pipeline on [[dmri_pipeline_descriptions](https://github.com/ANQIFENG/RATNUS/blob/main/docs/pipeline_for_diffusion_derived_features.md)]. 
-Additionally, the processing code can be found on [[dmri_pipeline_codes](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline)].
 
 
 <div style="text-align: center;">
