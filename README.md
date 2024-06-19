@@ -405,6 +405,7 @@ we recommend using [[smri_pipeline](https://github.com/ANQIFENG/RATNUS?tab=readm
 Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
 
 For calculating T1 map, PD map and Multi-TI images, please refer to [[sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#smri-processing-pipeline)]. 
+
 For generating diffusion derived features, please refer to [[dMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#dmri-processing-pipeline)]. 
 
 
