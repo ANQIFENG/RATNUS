@@ -311,7 +311,23 @@ The pipeline contains:
 ✅ indicates required parameters. 🟡 indicates parameters with default values. If not provided, the default values will be used.
 
 #### Output 
+This repository's Singularity containers are built based on [[Radifox](https://github.com/jh-mipc/radifox?tab=readme-ov-file#processingmodule)], 
+and our file organization follows the rules outlined in Radifox.
 
+##### Output Structure
+The output directory (`/path/to/out/dir`) is organized into four subdirectories:
+
+``` 
+/path/to/output
+    └── proc
+    └── logs
+    └── qa
+    └── tmp
+```
+- `proc`: This directory stores the output NIfTI files.
+- `log`: This directory stores the logs from the processing steps.
+- `qa`: This directory stores the images for Quality Assurance (QA).
+- `tmp`: This directory stores temporary results. This directory is created only if save_intermediate is set to True.
 
 
 ### dMRI Processing Pipeline
