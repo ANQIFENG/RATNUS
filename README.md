@@ -239,19 +239,31 @@ The pipeline contains:
         <td style="text-align: center;">tr</td>
         <td style="text-align: left;">
           <ul>
-          <li>Repetition time (TR) for both your MPRAGE and FGATIR images.</li>
-          <li>For synthesizing Multi-TI images, the TR of MPRAGE and FGATIR must be equal. While TI values vary, TR should remain consistent to ensure image comparability. </li>
+            <li>Repetition time (TR) for both your MPRAGE and FGATIR images.</li>
+            <li>For synthesizing Multi-TI images, the TR of MPRAGE and FGATIR must be equal. While TI values vary, TR should remain consistent to ensure image comparability. </li>
+            <li> Used for T1/PD calculation and Multi-TI synthesis.</li>
           </ul>
         </td>
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
         <td style="text-align: center;">ti_mprage</td>
-        <td style="text-align: left;" rowspan="2"></td>
+        <td style="text-align: left;">
+          <ul>
+            <li> Inversion time (TI) for your MPRAGE image.</li>
+            <li> Used for T1/PD calculation. </li>
+          </ul>
+        </td>
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
         <td style="text-align: center;">ti_fgatir</td>
+        <td style="text-align: left;">
+          <ul>
+            <li> Inversion time (TI) for your FGATIR image.</li>
+            <li> Used for T1/PD calculation. </li>
+          </ul>
+        </td>
         <td style="text-align: center;">✅</td>
       </tr>
       <tr>
