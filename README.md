@@ -4,9 +4,12 @@ Rapid, Automated Thalamic Nuclei Segmentation using Multimodal MRI Inputs [[Pape
 
 RATNUS is a deep learning-based method for rapid and automatic segmentation of thalamic nuclei using multimodal MRI. 
 Our approach efficiently segments 13 distinct nuclei classes, providing detailed insights into thalamic structure. 
-RATNUS supports two versions: a T1-weighted dual-input version and a full-input version, 
-detailed further in the [About RATNUS](#about-ratnus) section. 
-Both version can complete segmentation in less than one minute.
+RATNUS comprises two components: 
+- Multimodal MRI Calculation 
+- Segmentation. 
+
+The Multimodal MRI Calculation takes less than 20 minutes, and the Segmentation, 
+with its two versions，a T1-weighted dual-input version, and a full-input version， completes in less than one minute. 
 
 
 # How to run :runner:
