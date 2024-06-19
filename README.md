@@ -9,7 +9,7 @@ RATNUS comprises two components:
 - Segmentation
 
 The Multimodal MRI Calculation takes less than 20 minutes, and the Segmentation, 
-with its two versions，a T1-weighted dual-input version, and a full-input version, completes in less than one minute. 
+with its two versions，a T1-weighted dual-input version and a full-input version, completes in less than one minute. 
 
 
 # How to run :runner:
