@@ -68,7 +68,7 @@ singularity run -e --nv smri_pipeline.sif \
             --num_workers ${number_of_workers_for_parallel_processing} \
             --save_intermediate ${flag_to_save_intermediate_results}
  ```   
-For a detailed explanation of the parameters, see [[here](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#input)].
+For a detailed explanation of the parameters, see [here](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#input).
 
 Example bash script:
 ```bash
@@ -181,7 +181,7 @@ For MPRAGE, FGATIR, and diffusion images, we employ different processing methods
 - For diffusion images, we primarily use TORTOISE and custom scripts to process and calculate scalar maps.
 
 ### sMRI Processing Pipeline
-We have packaged the entire pipeline into the [[Singularity Container](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#multimodal-mri-calculation)].
+We have packaged the entire pipeline into the [Singularity Container](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#multimodal-mri-calculation).
 
 The pipeline contains the following steps in sequence:
 - HD-BET Brain Extraction
@@ -311,7 +311,7 @@ The pipeline contains the following steps in sequence:
 ✅ indicates required parameters. 🟡 indicates parameters with default values. If not provided, the default values will be used.
 
 #### Outputs 
-This repository's Singularity containers are built based on [[Radifox](https://github.com/jh-mipc/radifox?tab=readme-ov-file#processingmodule)], 
+This repository's Singularity containers are built based on [Radifox](https://github.com/jh-mipc/radifox?tab=readme-ov-file#processingmodule), 
 and our file organization follows the rules outlined in Radifox.
 
 ##### Output Structure
@@ -355,7 +355,7 @@ Below is a list of the output files and their descriptions:
 - `multi-ti/synT1_xxx.nii.gz`: Multi-TI images, where `xxx` represents the TI value.
 
 ### dMRI Processing Pipeline
-The scripts of dMRI processing pipeline can be found in: [RATNUS - DMRI Pipeline](https://github.com/ANQIFENG/RATNUS/tree/main/dmri_processing_pipelines).
+The scripts of dMRI processing pipeline can be found in [dmri_processing_pipeline](https://github.com/ANQIFENG/RATNUS/tree/main/dmri_processing_pipeline).
 
 
 #### Steps Overview
@@ -444,7 +444,7 @@ The output files relevant for our analysis are:
 Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
 
 If your MPRAGE and FGATIR have not undergone the following processing steps, 
-we recommend using [[sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#multimodal-mri-calculation)] to get processed MPRAGE and FGATIR.
+we recommend using [sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#multimodal-mri-calculation) to get processed MPRAGE and FGATIR.
 
 <div style="text-align: center;">
   <table>
@@ -484,9 +484,9 @@ we recommend using [[sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNU
 #### Full Input Version: 
 Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
 
-For calculating T1 map, PD map and Multi-TI images, please refer to [[sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#smri-processing-pipeline)]. 
+For calculating T1 map, PD map and Multi-TI images, please refer to [sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#smri-processing-pipeline). 
 
-For generating diffusion derived features, please refer to [[dMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#dmri-processing-pipeline)]. 
+For generating diffusion derived features, please refer to [dMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#dmri-processing-pipeline). 
 
 
 
