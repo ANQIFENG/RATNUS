@@ -311,8 +311,8 @@ The pipeline contains the following steps in sequence:
 ✅ indicates required parameters. 🟡 indicates optional parameters, if not provided, the default values will be used.
 
 #### Outputs 
-This repository's Singularity containers are built based on [Radifox](https://github.com/jh-mipc/radifox?tab=readme-ov-file#processingmodule), 
-and our file organization follows the rules outlined in Radifox.
+This repository's Singularity containers are built based on [RADIFOX](https://github.com/jh-mipc/radifox?tab=readme-ov-file#processingmodule), 
+and our file organization follows the rules outlined in RADIFOX.
 
 ##### Output Structure
 The output directory (`/path/to/output`) is organized into four subdirectories:
