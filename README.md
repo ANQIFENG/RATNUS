@@ -482,7 +482,7 @@ we recommend using [sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS
 ✅ indicates required; ⭕ indicates not required.
 
 #### Full Input Version: 
-Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features
+Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features.
 
 For calculating T1 map, PD map and Multi-TI images, please refer to [sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#smri-processing-pipeline). 
 
@@ -541,7 +541,7 @@ For generating diffusion derived features, please refer to [dMRI Processing Pipe
         <td style="text-align: left;">
           <ul>
               <li>The diffusion-derived features include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map.</li>
-              <li>The input requires combining these features into a single NIfTI file with 13 channels</li>      
+              <li>The input requires combining these features into a single NIfTI file with 13 channels. </li>      
         </ul>
         </td>
         <td style="text-align: center;">✅</td>
