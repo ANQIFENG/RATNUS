@@ -271,7 +271,7 @@ The pipeline contains the following steps in sequence:
         <td style="text-align: left;" rowspan="3"> 
           <ul>
               <li> These parameters define the range and increments for synthesizing Multi-TI images. Specifically, ti_min sets the minimum inversion time, ti_max sets the maximum inversion time, and ti_step defines the increment between each TI value. </li>
-              <li> The default values are 400 ms for ti_min, 1400 ms for ti_max, and 20 ms for ti_step</li>
+              <li> The default values are 400 ms for ti_min, 1400 ms for ti_max, and 20 ms for ti_step. </li>
               <li> By varying the TI within this default range, a set of 51 images is generated. This range is chosen to maximize contrast in the thalamus, revealing its internal structure with enhanced clarity.</li>
         </ul>
         </td>
