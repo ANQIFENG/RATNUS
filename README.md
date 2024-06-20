@@ -422,7 +422,7 @@ All images are collected using a 3T Siemens Prisma scanner.
 Additionally, T2-weighted images are required in the step00, specifically the DIFFPREP and DRBUDDI modules. 
 Our T2 images are in MNI space with 1mm resolution, and have undergone N4 bias field correction and white matter mean normalization.
 
-####  Expected output
+####  Expected outputs
 
 The output files relevant for our analysis are:
 
@@ -572,10 +572,10 @@ The output NIfTI files will be found in `proc` directory.
 The output segmentation will maintain the same dimensions and resolution as your input data.
 The output file name will end with one of the following suffixes based on the input version:
 
-- `_ratnus`: For the full-input version.
-- `_ratnus_dual`: If you are using the T1-weighted dual-input version.
-- `_ratnus_mprage`: If only MPRAGE is used in the dual-input version.
-- `_ratnus_fgatir`: If only FGATIR is used in the dual-input version.
+- `*_ratnus`: For the full-input version.
+- `*_ratnus_dual`: If you are using the T1-weighted dual-input version.
+- `*_ratnus_mprage`: If only MPRAGE is used in the dual-input version.
+- `*_ratnus_fgatir`: If only FGATIR is used in the dual-input version.
 
 #### Label and Color Tabel
 The output segmentation labels 13 distinct thalamic nuclei, with `0` representing the background and `1-13` corresponding to specific nuclei labels as follows:
