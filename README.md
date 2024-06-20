@@ -346,7 +346,7 @@ Below is a list of the output files and their descriptions:
 - `*_n4sqrt.nii.gz`: MPRAGE and FGATIR images after N4 bias field correction.
 - `*_bias.nii.gz`: Bias field for MPRAGE and FGATIR images.
 - `*_harmonic_bias.nii.gz`: Harmonic bias field.
-- `*_wmn.nii.gz`: MPRAGE and FGATIR images after white matter mean normalization. Finish processing stage, ready for further calculations such as PD and T1 map synthesis.
+- `*_wmn.nii.gz`: MPRAGE and FGATIR images after white matter mean normalization. Finish processing stage, ready for further calculations such as PD and T1 maps.
 - `*_wm_mask.nii.gz`: White matter mask in MNI space.
 - `*_bg_mask.nii.gz`: Background mask in MNI space.
 - `*_brain_mask.nii.gz`: Brain mask in MNI space.
