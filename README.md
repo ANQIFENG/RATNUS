@@ -68,7 +68,7 @@ singularity run -e --nv smri_pipeline.sif \
             --num_workers ${number_of_workers_for_parallel_processing} \
             --save_intermediate ${flag_to_save_intermediate_results}
  ```   
-For a detailed explanation of the parameters, see [here](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#input).
+For a detailed explanation of the parameters, see [here](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#inputs).
 
 Example bash script:
 ```bash
