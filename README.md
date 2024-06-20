@@ -355,7 +355,7 @@ Below is a list of the output files and their descriptions:
 - `multi-ti/synT1_xxx.nii.gz`: Multi-TI images, where `xxx` represents the TI value.
 
 ### dMRI Processing Pipeline
-The scripts of dMRI processing pipeline can be found in: [RATNUS - DMRI Pipeline](https://github.com/ANQIFENG/RATNUS/tree/main/processing_pipelines/dmri_pipeline).
+The scripts of dMRI processing pipeline can be found in: [RATNUS - DMRI Pipeline](https://github.com/ANQIFENG/RATNUS/tree/main/dmri_processing_pipelines).
 
 
 #### Steps Overview
