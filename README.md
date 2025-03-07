@@ -155,7 +155,7 @@ For generating diffusion derived features, please refer to [dMRI Processing Pipe
         <td style="text-align: left;" rowspan="2"> 
           <ul>
               <li> These images should be processed together for accurate maps estimation, including co-registration, Bias Field Correction with a harmonic bias field and consistent intensity normalization.</li>
-              <li> :warning: Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. </li>
+              <li> Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. :warning: </li>
           </ul>
         </td>
         <td style="text-align: center;">✅</td>
@@ -178,8 +178,8 @@ For generating diffusion derived features, please refer to [dMRI Processing Pipe
         <td style="text-align: left;">
           <ul>
           <li> Derived from T1 & PD maps. Specifically, the Inversion Time (TI) ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
-                This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.
-                The final input combines these into a 51-channel NIfTI file.</li>     
+                This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.</li>
+            <li> The final input combines these into a 51-channel NIfTI file.</li>     
         </ul>
         </td>
         <td style="text-align: center;">✅</td>
@@ -188,7 +188,8 @@ For generating diffusion derived features, please refer to [dMRI Processing Pipe
         <td style="text-align: center;">Diffusion</td>
         <td style="text-align: left;">
           <ul>
-              <li>The diffusion-derived features include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map. These are combined into a 13-channel NIfTI file.</li>      
+              <li>The diffusion-derived features include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map. 
+                <li> These are combined into a 13-channel NIfTI file.</li>      
         </ul>
         </td>
         <td style="text-align: center;">✅</td>
