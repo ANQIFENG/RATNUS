@@ -88,14 +88,9 @@ singularity run --nv $sif_path \
 ```
 
 ## Details :brain:
-
-We generate multi-modality images from raw MPRAGE, FGATIR, and diffusion scans. 
-These include processed MPRAGE, FGATIR, T1/PD maps, Multi-TI images, and diffusion-derived features. 
-These images are then combined as inputs for segmentation, enabling rapid and accurate identification of 13 thalamic nuclei.
+RATNUS requires multi-modality images as inputs, including the MPRAGE and FGATIR sequences, T1 and PD maps, Multi-TI images, and diffusion-derived features.
 For the processing of MPRAGE and FGATIR to compute T1/PD maps and Multi-TI images, please refer to our dedicated repository [here](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline).
 For diffusion-derived features, detailed calculations can be found [here](dmri_processing_pipeline/dmri_processing_pipeline_overview.md).
-
-
 
 ### Inputs 
 #### T1w-Dual Input Version:
