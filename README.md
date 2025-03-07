@@ -94,10 +94,9 @@ For diffusion-derived features, detailed calculations can be found [here](dmri_p
 
 ### Inputs 
 #### T1w-Dual Input Version:
-Trained with MPRAGE and FGATIR, suitable for testing with either one or two modalities.
-
-If your MPRAGE and FGATIR have not undergone the following processing steps, 
-we recommend using [sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#multimodal-mri-calculation) to get processed MPRAGE and FGATIR.
+Trained with MPRAGE and FGATIR, allowing testing with either or both modalities. 
+To ensure optimal results, your MPRAGE and FGATIR data should undergo the following preprocessing steps. 
+If not, we recommend using [multi-TI-image-calc-pipeline](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline) for processed images.
 
 <div style="text-align: center;">
   <table>
@@ -113,8 +112,7 @@ we recommend using [sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS
         <td style="text-align: center;">MPRAGE</td>
         <td style="text-align: left;" rowspan="2"> 
           <ul>
-            <p><u>For optimal results, ensure that your test data is prepared as follows:</u></p>
-            <li><strong>Registration to MNI Space</strong>: The data should be registered to the MNI space, with a resolution of 1mm isotropic. RATNUS assumes a spatial dimension of 192x224x192.</li>
+            <li><strong>Registration to MNI Space</strong>(1mm isotropic, 192×224×192)</li>
             <li><strong>Inhomogeneity Correction or Bias Field Correction</strong></li>
             <li><strong>Intensity Normalization</strong></li>
           </ul>
@@ -132,7 +130,7 @@ we recommend using [sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS
     </tbody>
   </table>
 </div>
-✅ indicates required; ⭕ indicates not required.
+✅ Required; ⭕ Not Required .
 
 #### Full Input Version: 
 Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features.
