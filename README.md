@@ -216,6 +216,7 @@ The output directory (`/path/to/output`) is organized into three subdirectories:
 ```
 - proc: Stores the output NIfTI files.
 - log: Stores the logs from the processing steps.
+- qa: Stores QA images for quick result review.
 
 #### Output Files
 The output NIfTI files will be found in `proc` directory.
