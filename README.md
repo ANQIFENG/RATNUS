@@ -214,6 +214,8 @@ The output directory (`/path/to/output`) is organized into three subdirectories:
         └── [thalamic-nuclei-segmentation]
             └── [QA images]
 ```
+- proc: Stores the output NIfTI files.
+- log: Stores the logs from the processing steps.
 
 #### Output Files
 The output NIfTI files will be found in `proc` directory.
