@@ -250,7 +250,7 @@ The color table can be viewed and downloaded from :
 [RATNUS Color Table](https://github.com/ANQIFENG/RATNUS/blob/main/ratnus_color_table.txt).
 
 
-# Citation :open_book:
+## Citation :open_book:
 If you find this project useful in your research, please consider citing:
 
 ```bibtex
@@ -263,5 +263,5 @@ If you find this project useful in your research, please consider citing:
 ```
 
 
-# Contact :e-mail:
+## Contact :e-mail:
 For questions or support, please contact [afeng11@jhu.edu](mailto:afeng11@jhu.edu) or post through [GitHub Issues](https://github.com/ANQIFENG/RATNUS/issues).
