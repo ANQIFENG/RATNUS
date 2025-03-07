@@ -14,50 +14,39 @@ Our approach efficiently segments 13 distinct nuclei classes, providing detailed
 
 ### Installation
 #### T1-weighted dual-input version:
-You can install using Singularity with the following command:
+Install the Singularity Image with the following command:
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dual:v1.0.0
 ```
-Alternatively, you can download the Singularity image directly from this [[link](https://mega.nz/file/F2E1Fa4T#pg01iR4yN9rOQ2eEBzBCeBye-GVw7WN_n4TXOK3TdOc)].
+Or download the Singularity image directly from [[link](https://mega.nz/file/F2E1Fa4T#pg01iR4yN9rOQ2eEBzBCeBye-GVw7WN_n4TXOK3TdOc)].
 
 
 #### Full-input version:
-You can install using Singularity with the following command:
+Install the Singularity Image with the following command:
 ```bash
 singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v1.0.0
 ```
-Alternatively, you can download the Singularity image directly from this [[link](https://mega.nz/file/sjMh2LzT#LeN-Exsq1yy7jtec2QS43v1XRBUvwwEPW7zQfj7C0Mc)].
+Or download the Singularity image directly from [[link](https://mega.nz/file/sjMh2LzT#LeN-Exsq1yy7jtec2QS43v1XRBUvwwEPW7zQfj7C0Mc)].
 
 
 ### Usage
-To run the RATNUS model using the Singularity image, use the following command. 
-Replace the placeholder paths with the actual paths to your input files and specify the output directory.
-If you are using a CPU, you can remove the `--nv` option from the command.
-All input data files are expected to be in NIfTI format (`.nii` or `.nii.gz`).
+To run the Singularity Image, use the command below, 
+replacing placeholder paths with actual input files and output directory.
+Remove the `--nv`if using a CPU. Input files must be in NIfTI format (`.nii` or `.nii.gz`).
 
 #### T1-weighted dual-input version:
-We use MPRAGE and FGATIR as normal inputs, 
-and support missing modalities where only MPRAGE or only FGATIR is available.
+This supports MPRAGE and FGATIR as inputs, allowing either or both modalities.
 
-#### 1.Using both MPRAGE and FGATIR as inputs:
 ```bash
 singularity run --nv ratnus_dual.sif \
-            --mprage ${path_to_your_mprage_image} \
-            --fgatir ${path_to_your_fgatir_image} \
-            --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
- ```           
-#### 2.Using only MPRAGE:
-```bash
-singularity run --nv ratnus_dual.sif \
-            --mprage ${path_to_your_mprage_image} \
-            --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
- ```   
-#### 3.Using only FGATIR:
-```bash
-singularity run --nv ratnus_dual.sif \
-            --fgatir ${path_to_your_fgatir_image} \
-            --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
- ```   
+          ${mprage:+--mprage $mprage} \
+          ${fgatir:+--fgatir $fgatir} \
+          --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
+ ```
+- **Both MPRAGE & FGATIR:** Set `mprage` and `fgatir` paths.  
+- **Only MPRAGE:** Set `mprage`; omit `fgatir`.  
+- **Only FGATIR:** Set `fgatir`; omit `mprage`. 
+
 
 #### Full-input version:
 Command:
@@ -99,7 +88,7 @@ singularity run --nv $sif_path \
 ```
 
 ## Details :brain:
-RATNUS comprises two main components: Multimodal MRI Calculation and Segmentation. 
+
 First, we process and calculate multi-modality images from raw MPRAGE, FGATIR, and diffusion images. 
 These multi-modality images include processed MPRAGE, processed FGATIR, T1/PD maps, Multi-TI images, and diffusion-derived features. 
 These images are used because they provide excellent contrast within the thalamus. 
