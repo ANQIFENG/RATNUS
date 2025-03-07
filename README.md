@@ -43,9 +43,9 @@ singularity run --nv ratnus_dual.sif \
           ${fgatir:+--fgatir $fgatir} \
           --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
  ```
-- **Both MPRAGE & FGATIR:** Set `mprage` and `fgatir` paths.  
-- **Only MPRAGE:** Set `mprage`; omit `fgatir`.  
-- **Only FGATIR:** Set `fgatir`; omit `mprage`. 
+- Both MPRAGE & FGATIR: Set `mprage` and `fgatir` paths.  
+- Only MPRAGE: Set `mprage`; omit `fgatir`.  
+- Only FGATIR: Set `fgatir`; omit `mprage`. 
 
 
 #### Full-input version:
