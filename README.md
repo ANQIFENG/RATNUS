@@ -133,12 +133,11 @@ If not, we recommend using [multi-TI-image-calc-pipeline](https://github.com/ANQ
 ✅ Required; ⭕ Not Required .
 
 #### Full Input Version: 
-Trained with a comprehensive set of modalities as detailed in our paper. Strictly supports testing with an identical set of input features.
+Trained with a comprehensive set of modalities as detailed in our paper and strictly requires an identical input feature set for testing.
 
-For calculating T1 map, PD map and Multi-TI images, please refer to [sMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#smri-processing-pipeline). 
+For calculating T1 map, PD map and Multi-TI images, refer to [multi-TI-image-calc-pipeline](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline).
 
-For generating diffusion derived features, please refer to [dMRI Processing Pipeline](https://github.com/ANQIFENG/RATNUS?tab=readme-ov-file#dmri-processing-pipeline). 
-
+For generating diffusion derived features, please refer to [dMRI Processing Pipeline](https://mega.nz/file/sjMh2LzT#LeN-Exsq1yy7jtec2QS43v1XRBUvwwEPW7zQfj7C0Mc). 
 
 
 <div style="text-align: center;">
@@ -155,9 +154,8 @@ For generating diffusion derived features, please refer to [dMRI Processing Pipe
         <td style="text-align: center;">MPRAGE</td>
         <td style="text-align: left;" rowspan="2"> 
           <ul>
-              <li> The processing of MPRAGE and FGATIR is similar to that in the T1w-Dual Input Version. </li>
-              <li> However, to synthesize Multi-TI images effectively, these modalities must be processed together. :warning: Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. </li>
-              <li> Therefore, a harmonic bias field is employed for Bias Field Correction and consistent Intensity Normalization is applied to ensure uniformity.</li>
+              <li> These images should be processed together for accurate maps estimation, including co-registration, Bias Field Correction with a harmonic bias field and consistent intensity normalization.</li>
+              <li> :warning: Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. </li>
           </ul>
         </td>
         <td style="text-align: center;">✅</td>
@@ -170,7 +168,7 @@ For generating diffusion derived features, please refer to [dMRI Processing Pipe
         <td style="text-align: center;">T1 & PD</td>
         <td style="text-align: left;">
           <ul>
-            <li> The T1 map and PD map are generated using a combined processing of MPRAGE and FGATIR images. </li>
+            <li> Generated from combined processing of MPRAGE and FGATIR. </li>
           </ul>
         </td>
         <td style="text-align: center;">✅</td>
@@ -179,10 +177,9 @@ For generating diffusion derived features, please refer to [dMRI Processing Pipe
         <td style="text-align: center;">Multi-TI</td>
         <td style="text-align: left;">
           <ul>
-          <li>Following the T1&PD maps calculation, a series of Multi-TI images are synthesized. </li>
-          <li> Specifically, the Inversion Time (TI) for Multi-TI image ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
-                This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.</li>
-          <li> The input requires combining 51 images into a single NIfTI file with 51 channels.</li>     
+          <li> Derived from T1 & PD maps. Specifically, the Inversion Time (TI) ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
+                This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.
+                The final input combines these into a 51-channel NIfTI file.</li>     
         </ul>
         </td>
         <td style="text-align: center;">✅</td>
@@ -191,8 +188,7 @@ For generating diffusion derived features, please refer to [dMRI Processing Pipe
         <td style="text-align: center;">Diffusion</td>
         <td style="text-align: left;">
           <ul>
-              <li>The diffusion-derived features include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map.</li>
-              <li>The input requires combining these features into a single NIfTI file with 13 channels. </li>      
+              <li>The diffusion-derived features include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map. These are combined into a 13-channel NIfTI file.</li>      
         </ul>
         </td>
         <td style="text-align: center;">✅</td>
