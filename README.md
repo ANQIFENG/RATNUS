@@ -41,7 +41,7 @@ This supports MPRAGE and FGATIR as inputs, allowing either or both modalities.
 singularity run --nv ratnus_dual.sif \
           ${mprage:+--mprage $mprage} \
           ${fgatir:+--fgatir $fgatir} \
-          --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
+          --out_dir ${path_to_output_directory}
  ```
 - Both MPRAGE & FGATIR: Set `mprage` and `fgatir` paths.  
 - Only MPRAGE: Set `mprage`; omit `fgatir`.  
@@ -52,13 +52,13 @@ singularity run --nv ratnus_dual.sif \
 Command:
 ```bash
 singularity run --nv ratnus.sif \
-            --mprage ${path_to_your_mprage_image} \
-            --fgatir ${path_to_your_fgatir_image} \
-            --t1map ${path_to_your_t1_map} \
-            --pdmap ${path_to_your_pd_map} \
-            --multiTI ${path_to_you_multi-TI_images} \
-            --diffusion ${path_to_you_diffusion_derived_features} \
-            --out_dir ${path_to_the_directory_where_you_want_the_output_to_be_stored}
+            --mprage ${path_to_mprage} \
+            --fgatir ${path_to_fgatir} \
+            --t1map ${path_to_t1_map} \
+            --pdmap ${path_to_pd_map} \
+            --multiTI ${path_to_multi-TI_images} \
+            --diffusion ${path_to_diffusion_derived_features} \
+            --out_dir ${path_to_output_directory}
  ```           
 
 Example bash script:
@@ -66,12 +66,12 @@ Example bash script:
 #!/bin/bash
 
 # Define paths to your data, output directory and singularity image
-mprage_path="./MTBI-MRCON0001_v1_T1w.nii.gz"
-fgatir_path="./MTBI-MRCON0001_v1_FGATIR.nii.gz"
-t1map_path="./MTBI-MRCON0001_v1_t1map.nii.gz"
-pdmap_path="./MTBI-MRCON0001_v1_pdmap.nii.gz"
-multiTI_path="./MTBI-MRCON0001_v1_multiTI.nii.gz"
-diffusion_path="./MTBI-MRCON0001_v1_diffusion_features.nii.gz"
+mprage_path="./MPRAGE.nii.gz"
+fgatir_path="./FGATIR.nii.gz"
+t1map_path="./t1map.nii.gz"
+pdmap_path="./pdmap.nii.gz"
+multiTI_path="./multiTIs.nii.gz"
+diffusion_path="./diffusion_features.nii.gz"
 out_dir="./ratnus_outputs"
 sif_path="./ratnus_v1.0.0.sif"
 
@@ -90,8 +90,7 @@ singularity run --nv $sif_path \
 ## Details :brain:
 
 First, we process and calculate multi-modality images from raw MPRAGE, FGATIR, and diffusion images. 
-These multi-modality images include processed MPRAGE, processed FGATIR, T1/PD maps, Multi-TI images, and diffusion-derived features. 
-These images are used because they provide excellent contrast within the thalamus. 
+These multi-modality images include processed MPRAGE, processed FGATIR, T1/PD maps, Multi-TI images, and diffusion-derived features.
 Next, we combine these images as inputs for segmentation, enabling rapid and accurate segmentation of 13 thalamic nuclei.
 
 
