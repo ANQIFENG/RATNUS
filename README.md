@@ -39,7 +39,7 @@ You can generate T1 maps from MPRAGE and FGATIR pairs using our dedicated reposi
     <thead>
       <tr>
         <th>Arg</th>
-        <th>Preparation</th>
+        <th>Description</th>
         <th>Required</th>
       </tr>
     </thead>
