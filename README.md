@@ -30,8 +30,8 @@ singularity run --nv ratnus_t1map.sif \
 
 
 ## Details :brain:
-RATNUS_T1MAP requires T1 maps as inputs, which we have validated as the optimal inputs to the thalamic nuclei segmentation. You can
-calculate them from paris of  MPRAGE and FGATIR using our dedicated repository [here](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline).
+RATNUS_T1MAP uses T1 maps as inputs, which we validated as optimal for thalamic nuclei segmentation. 
+You can generate T1 maps from MPRAGE and FGATIR pairs using our dedicated repository [here](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline).
 
 ### Inputs
 Trained with MPRAGE and FGATIR, allowing testing with either or both modalities. 
