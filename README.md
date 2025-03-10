@@ -69,7 +69,7 @@ You can generate T1 maps from MPRAGE and FGATIR pairs using our dedicated reposi
 ### Outputs
 
 #### Output Structure
-The output directory (`/path/to/output`) is organized into three subdirectories:
+The output directory (`/path/to/output`) is organized into two subdirectories:
 
 ``` 
 /path/to/output
