@@ -2,9 +2,8 @@
 
 Rapid, Automated Thalamic Nuclei Segmentation using Multimodal MRI Inputs [[Paper](https://arxiv.org/pdf/2409.06897)]
 
-RATNUS is a deep learning-based method for rapid and automatic segmentation of thalamic nuclei. 
-Our approach efficiently segments 13 distinct nuclei classes, providing detailed insights into thalamic structure.
-**This branch (v2.0-ratnus_t1map)** is our updated version, which takes **T1 maps** as input, where we have validated that T1 maps offer optimal performance in thalamic nuclei segmentation. 
+RATNUS is a deep learning-based method for fast and accurate thalamic nuclei segmentation, distinguishing 13 nuclei classes for detailed structural insights.
+This branch **(v2.0-ratnus_t1map)** is an updated version using T1 maps, which we validated to achieve optimal segmentation performance.
 For the multimodal version, please see branch [v1.0-ratnus](https://github.com/ANQIFENG/RATNUS/tree/v1.0-ratnus).
 
 ## How to run :runner:
