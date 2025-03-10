@@ -5,96 +5,37 @@ Rapid, Automated Thalamic Nuclei Segmentation using Multimodal MRI Inputs [[Pape
 RATNUS is a deep learning-based method for rapid and automatic segmentation of thalamic nuclei. 
 Our approach efficiently segments 13 distinct nuclei classes, providing detailed insights into thalamic structure.
 **This branch (v2.0-ratnus_t1map)** is our updated version, which takes **T1 maps** as input. 
-For the **multimodal version** described in our paper, please see branch [v1.0-ratnus](https://github.com/ANQIFENG/RATNUS/tree/v1.0-ratnus).
+We have validated that T1 maps offer optimal performance in thalamic nuclei segmentation.  
+For the **multimodal version**, please see branch [v1.0-ratnus](https://github.com/ANQIFENG/RATNUS/tree/v1.0-ratnus).
 
 ## How to run :runner:
 ### Prerequisites
 - **Operating System:** Linux or OSX
 - **Hardware:** GPU is recommended; CPU is also supported
 
-
 ### Installation
-#### T1-weighted dual-input version:
 Install the Singularity Image with the following command:
 ```bash
-singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_dual:v1.0.0
+singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus_t1map:v1.0.0
 ```
-Or download the Singularity image directly from [[link](https://mega.nz/file/F2E1Fa4T#pg01iR4yN9rOQ2eEBzBCeBye-GVw7WN_n4TXOK3TdOc)].
-
-
-#### Full-input version:
-Install the Singularity Image with the following command:
-```bash
-singularity pull --docker-login docker://registry.gitlab.com/anqifeng/ratnus:v1.0.0
-```
-Or download the Singularity image directly from [[link](https://mega.nz/file/sjMh2LzT#LeN-Exsq1yy7jtec2QS43v1XRBUvwwEPW7zQfj7C0Mc)].
-
 
 ### Usage
 To run the Singularity Image, use the command below, 
 replacing placeholder paths with actual input files and output directory.
 Remove the `--nv`if using a CPU. Input files must be in NIfTI format (`.nii` or `.nii.gz`).
-
-#### T1-weighted dual-input version:
-This supports MPRAGE and FGATIR as inputs, allowing either or both modalities.
-
 ```bash
-singularity run --nv ratnus_dual.sif \
-          ${mprage:+--mprage $mprage} \
-          ${fgatir:+--fgatir $fgatir} \
-          --out_dir ${path_to_output_directory}
- ```
-- Both MPRAGE & FGATIR: Set `mprage` and `fgatir` paths.  
-- Only MPRAGE: Set `mprage`; omit `fgatir`.  
-- Only FGATIR: Set `fgatir`; omit `mprage`. 
+singularity run --nv ratnus_t1map.sif \
+               --data_path ${data_path} \
+               --out_dir ${out_dir} \
+               --device ${device}
+ ``` 
 
-
-#### Full-input version:
-Command:
-```bash
-singularity run --nv ratnus.sif \
-            --mprage ${path_to_mprage} \
-            --fgatir ${path_to_fgatir} \
-            --t1map ${path_to_t1_map} \
-            --pdmap ${path_to_pd_map} \
-            --multiTI ${path_to_multi-TI_images} \
-            --diffusion ${path_to_diffusion_derived_features} \
-            --out_dir ${path_to_output_directory}
- ```           
-
-Example bash script:
-```bash
-#!/bin/bash
-
-# Define paths to your data, output directory and singularity image
-mprage_path="./MPRAGE.nii.gz"
-fgatir_path="./FGATIR.nii.gz"
-t1map_path="./t1map.nii.gz"
-pdmap_path="./pdmap.nii.gz"
-multiTI_path="./multiTIs.nii.gz"
-diffusion_path="./diffusion_features.nii.gz"
-out_dir="./ratnus_outputs"
-sif_path="./ratnus_v1.0.0.sif"
-
-
-# Run the RATNUS model with GPU support 
-singularity run --nv $sif_path \
-                --mprage ${mprage_path} \
-                --fgatir ${fgatir_path} \
-                --t1map ${t1map_path} \
-                --pdmap ${pdmap_path} \
-                --multiTI ${multiTI_path} \
-                --diffusion ${diffusion_path} \
-                --out_dir ${out_dir}
-```
 
 ## Details :brain:
-RATNUS requires multi-modality images as inputs, including MPRAGE and FGATIR sequences, T1 and PD maps, Multi-TI images, and diffusion-derived features.
-- For the processing of MPRAGE and FGATIR to compute T1/PD maps and Multi-TI images, please refer to our dedicated repository [here](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline).
-- For diffusion-derived features, detailed calculations can be found [here](dmri_processing_pipeline/dmri_processing_pipeline_overview.md).
+RATNUS_T1MAP requires T1 maps as inputs, which we have validated as the optimal inputs to the thalamic nuclei segmentation. You can
+calculate them from paris of  MPRAGE and FGATIR using our dedicated repository [here](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline).
 
-### Inputs 
-#### T1w-Dual Input Version:
+### Inputs
 Trained with MPRAGE and FGATIR, allowing testing with either or both modalities. 
 To ensure optimal results, your MPRAGE and FGATIR data should undergo the following preprocessing steps. 
 If not, we recommend using [multi-TI-image-calc-pipeline](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline) for processed images.
@@ -133,71 +74,6 @@ If not, we recommend using [multi-TI-image-calc-pipeline](https://github.com/ANQ
 </div>
 ✅ Required; ⭕ Not Required .
 
-#### Full Input Version: 
-Trained with a comprehensive set of modalities as detailed in our paper and strictly requires an identical input feature set for testing.
-
-For calculating T1 map, PD map and Multi-TI images, refer to [multi-TI-image-calc-pipeline](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline).
-
-For generating diffusion derived features, please refer to [dMRI Processing Pipeline](https://mega.nz/file/sjMh2LzT#LeN-Exsq1yy7jtec2QS43v1XRBUvwwEPW7zQfj7C0Mc). 
-
-
-<div style="text-align: center;">
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>Preparation</th>
-        <th >Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: center;">MPRAGE</td>
-        <td style="text-align: left;" rowspan="2"> 
-          <ul>
-              <li> These images should be processed together for accurate maps estimation, including co-registration, Bias Field Correction with a harmonic bias field and consistent intensity normalization.</li>
-              <li> Separate adjustments in brightness or contrast could result in computational errors for PD and T1 maps. :warning: </li>
-          </ul>
-        </td>
-        <td style="text-align: center;">✅</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">FGATIR</td>
-        <td style="text-align: center;">✅</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">T1 & PD</td>
-        <td style="text-align: left;">
-          <ul>
-            <li> Generated from combined processing of MPRAGE and FGATIR. </li>
-          </ul>
-        </td>
-        <td style="text-align: center;">✅</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">Multi-TI</td>
-        <td style="text-align: left;">
-          <ul>
-          <li> Derived from T1 & PD maps. Specifically, the Inversion Time (TI) ranges from 400 to 1400 ms in increments of 20 ms, producing a set of 51 images. 
-                This TI range is selected to maximize contrast within the thalamus, enhancing the visibility of its internal structure.</li>
-            <li> The final input combines these into a 51-channel NIfTI file.</li>     
-        </ul>
-        </td>
-        <td style="text-align: center;">✅</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">Diffusion</td>
-        <td style="text-align: left;">
-          <ul>
-              <li>The diffusion-derived features include Axial Diffusivity (AD), Fractional Anisotropy (FA), Radial Diffusivity (RD), Trace, three Westin measures (Linear Anisotropy (WL), Planar Anisotropy (WP), and Spheric Anisotropy (WS)), Knutsson 5D vector, and the Knutsson edge map. 
-                <li> These are combined into a 13-channel NIfTI file.</li>      
-        </ul>
-        </td>
-        <td style="text-align: center;">✅</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
 ### Outputs
 
@@ -208,26 +84,13 @@ The output directory (`/path/to/output`) is organized into three subdirectories:
 /path/to/output
     └── proc
         └── [output NIfTI files]
-    └── logs
-        └── [thalamic-nuclei-segmentation]
-            └── [processing logs]
     └── qa
-        └── [thalamic-nuclei-segmentation]
+        └── [ratnus_t1map]
             └── [QA images]
 ```
 - proc: Stores the output NIfTI files.
-- log: Stores the logs from the processing steps.
 - qa: Stores QA images for quick result review.
 
-#### Output Files
-The output NIfTI files will be found in `proc` directory.
-The output segmentation will maintain the same dimensions and resolution as your input data.
-The output file name will end with one of the following suffixes based on the input version:
-
-- `*_ratnus`: For the full-input version.
-- `*_ratnus_dual`: If you are using the T1-weighted dual-input version.
-- `*_ratnus_mprage`: If only MPRAGE is used in the dual-input version.
-- `*_ratnus_fgatir`: If only FGATIR is used in the dual-input version.
 
 #### Label and Color Tabel
 The output segmentation labels 13 distinct thalamic nuclei, with `0` representing the background and `1-13` corresponding to specific nuclei labels as follows:
@@ -244,7 +107,6 @@ The output segmentation labels 13 distinct thalamic nuclei, with `0` representin
 - `11`: Ventral Lateral Posterior (VLP)
 - `12`: Ventral Posterior Lateral (VPL)
 - `13`: Ventral Posterior Medial (VPM)
-
 
 Each nucleus is uniquely identified by a color code to facilitate visual analysis of the segmentation results. 
 The color table can be viewed and downloaded from :
