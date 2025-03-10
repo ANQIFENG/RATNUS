@@ -34,43 +34,36 @@ RATNUS_T1MAP uses T1 maps as inputs, which we validated as optimal for thalamic 
 You can generate T1 maps from MPRAGE and FGATIR pairs using our dedicated repository [here](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline).
 
 ### Inputs
-Trained with MPRAGE and FGATIR, allowing testing with either or both modalities. 
-To ensure optimal results, your MPRAGE and FGATIR data should undergo the following preprocessing steps. 
-If not, we recommend using [multi-TI-image-calc-pipeline](https://github.com/ANQIFENG/multi-TI-image-calc-pipeline) for processed images.
-
-<div style="text-align: center;">
+<div style="overflow-x:auto;">
   <table>
     <thead>
       <tr>
-        <th></th>
+        <th>Arg</th>
         <th>Preparation</th>
-        <th colspan="3">Required</th>
+        <th>Required</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="text-align: center;">MPRAGE</td>
-        <td style="text-align: left;" rowspan="2"> 
-          <ul>
-            <li><strong>Registration to MNI Space</strong>(1mm isotropic, 192×224×192)</li>
-            <li><strong>Inhomogeneity Correction or Bias Field Correction</strong></li>
-            <li><strong>Intensity Normalization</strong></li>
-          </ul>
-        </td>
-        <td style="text-align: center;">✅</td>
-        <td style="text-align: center;">✅</td>
-        <td style="text-align: center;">⭕️</td>
+        <td>data_path</td>
+        <td>Path to the input T1 map.</td>
+        <td>✅</td>
       </tr>
       <tr>
-        <td style="text-align: center;">FGATIR</td>
-        <td style="text-align: center;">✅</td>
-        <td style="text-align: center;">⭕️</td>
-        <td style="text-align: center;">✅</td>
+        <td>out_dir</td>
+        <td>Path to the output directory.</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>device</td>
+        <td>Computation device: either 'gpu' or 'cpu' (default: 'gpu').</td>
+        <td>⭕</td>
       </tr>
     </tbody>
   </table>
 </div>
-✅ Required; ⭕ Not Required .
+
+✅ Required; ⭕ Optional.
 
 
 ### Outputs
